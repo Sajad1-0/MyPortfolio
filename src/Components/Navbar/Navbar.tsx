@@ -34,11 +34,15 @@ const Navbar: React.FC = () => {
         {/* Left section of Menubar */}
         <div className='right-navbar'>
             {/* Navigation links */}
+            <ul>
             {MenuLinks.map((data, index)=> (
+                <li>
                 <Link key={index} className='nav-item' to={data.href}>
                     {data.name}
                 </Link>
+                </li>
             ))}
+            </ul>
         </div>
     </div>
   )
