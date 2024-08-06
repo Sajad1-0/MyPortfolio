@@ -15,3 +15,11 @@
     padding: 10px;
 }
 
+// style for mobile nabigation bar while opening it
+@mixin inset($top: 0, $right: 0, $bottom: 0, $left: 0) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }

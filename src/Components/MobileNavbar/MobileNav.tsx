@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { RiMenuLine } from "react-icons/ri";
 import { RiMenuFoldLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
+import './MobileNav.scss';
 
 interface Menu {
     name: string;
@@ -25,8 +26,8 @@ const MenuLinks: Menu[] = [
         <div className='mobile-nav'>
             {/* Button for toggleMenu */}
             <div className='mobileButton-section'>
-                <button className='button' onClick={toggleMenu}>
-                    {isOpen ? <RiMenuFoldLine/> : <RiMenuLine/> }
+                <button onClick={toggleMenu}>
+                    {isOpen ? <RiMenuFoldLine className='open'/> : <RiMenuLine/> }
                 </button>
             </div>
 
@@ -36,7 +37,8 @@ const MenuLinks: Menu[] = [
                     <ul className='Menu-items'>
                         {MenuLinks.map((data, index) => (
                             <li key={index} className='menu-list'>
-                                <Link to={data.link} className='links'>{data.name}</Link>  {/* Linking to routes */}
+                                <Link to={data.link} className='links'
+                                onClick={toggleMenu}>{data.name}</Link>  {/* Linking to routes */}
                             </li>
                         ))}
                     </ul>

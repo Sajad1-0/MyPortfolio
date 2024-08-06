@@ -1,2 +1,65 @@
-@import './Styles/variables';
-@import './Styles/mixins';
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+.mobile-nav {
+    display: none;
+}
+// resposive design for mobile devices
+@media only screen and (max-width: 768px) { 
+    .mobile-nav {
+        display: flex;
+        align-items: center;
+        .mobileButton-section {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 50;
+    
+            button {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: $text-color;
+                font-size: 25px;
+                transition: all 0.8s;
+                cursor: pointer;
+
+                .open {
+                    color: $dark-text-color;
+                }
+            }
+        }
+    }
+ // styling the navigaiton links 
+    .Menulinks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        @include inset;
+        background-color: $dark-background-color;
+        opacity: .9;
+        z-index: 40;
+
+        ul {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            list-style-type: none;
+            font-size: 28px;
+            line-height: 4;
+
+            a {
+                text-decoration: none;
+                font-weight: 600;
+                color: $dark-text-color;
+
+                &:hover {
+                    color: $hover-text-color;
+                    transition: all 0.2s;
+                }
+            }
+        }
+    }
+}

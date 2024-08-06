@@ -1,2 +1,69 @@
-@import "./Styles/variables";
-@import "./Styles/mixins";
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.navbar {
+    @include menubar;
+    background-color: $background-color;
+}
+
+// Styling left section
+.left-navbar {
+    display: flex;
+    
+    padding: 20px;
+
+    .logo {
+        font-family: "Pacifico", cursive;
+        font-size: 30px;
+        font-weight: 500;
+        color: $text-color;
+        
+        a {
+            text-decoration: none;
+            color: $text-color;
+
+            &:hover {
+                color: $hover-text-color;
+                transition: all 0.2s;
+            }
+        }
+    }
+}
+
+// Styling right section
+.right-navbar {
+    
+    ul {
+        display: flex;
+        gap: 15px;
+        list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: $text-color;
+                font-size: 18px;
+                font-weight: 600;
+
+                &:hover {
+                    color: $hover-text-color;
+                    transition: all 0.2s;
+                }
+            }
+        
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .right-navbar {
+        display: none;
+    }
+
+    .logo {
+        position: absolute;
+        top: 10px;
+        left: 40%;
+    }
+    
+}
