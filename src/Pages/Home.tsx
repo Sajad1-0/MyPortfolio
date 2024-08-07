@@ -1,8 +1,11 @@
 import React from 'react'
+import { MyProfile } from '../Components/Profile/MyProfile'
 
 const Home: React.FC = () => {
   return (
-    <div>Home</div>
+    <div>
+      <MyProfile/>
+    </div>
   )
 }
 

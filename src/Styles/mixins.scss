@@ -23,3 +23,12 @@
     bottom: $bottom;
     left: $left;
   }
+
+// flex style for my profile content
+@mixin Profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    background-color: $background-color;
+}
