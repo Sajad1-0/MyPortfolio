@@ -10,24 +10,21 @@
 // Styling left section
 .left-navbar {
     display: flex;
-    
     padding: 20px;
-
-    .logo {
-        font-family: "Pacifico", cursive;
-        font-size: 30px;
-        font-weight: 500;
-        color: $text-color;
         
-        a {
-            text-decoration: none;
+        button {
+            font-family: "Pacifico", cursive;
+            font-size: 30px;
+            font-weight: 500;
             color: $text-color;
+            border: none;
+            background-color: transparent;
 
             &:hover {
                 color: $hover-text-color;
                 transition: all 0.2s;
+                cursor: pointer;
             }
-        }
     }
 }
 
@@ -39,8 +36,9 @@
         gap: 15px;
         list-style-type: none;
 
-            a {
-                text-decoration: none;
+            button {
+                background-color: transparent;
+                border: none;
                 color: $text-color;
                 font-size: 18px;
                 font-weight: 600;
@@ -48,6 +46,7 @@
                 &:hover {
                     color: $hover-text-color;
                     transition: all 0.2s;
+                    cursor: pointer;
                 }
             }
         

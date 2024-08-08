@@ -29,3 +29,21 @@
     width: 50%;
     height: 100vh;
 }
+
+.skills-section {
+    padding: 1rem;
+    display: flex;
+
+}
+
+.skills-section ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-section li {
+    align-items: center;
+    margin-bottom: 0.5rem;
+}

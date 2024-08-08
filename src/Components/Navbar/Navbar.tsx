@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.scss';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import MobileNavigation from '../MobileNavbar/MobileNav';
 
 
@@ -13,13 +13,30 @@ interface Navigation {
 
 const MenuLinks: Navigation[] = [
     {name: 'Home', href: '/'},
-    {name: 'About', href: '/about'},
-    {name: 'Projects', href: '/projects'},
-    {name: 'Contact', href: '/contact'}
+    {name: 'About', href: '#about'},
+    {name: 'Projects', href: '#projects'},
+    {name: 'Contact', href: '#contact'}
 ]
 
 
 const Navbar: React.FC = () => {
+
+    const navigate = useNavigate();
+    // navigate to chosen section of the page
+    const handleNavigate = (href: string) => {
+        if (href.startsWith('#')) {
+            // scroll to selected section
+            const elementId = href.substring(1); // remove the #
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.scrollIntoView({behavior: 'smooth'});
+            }
+        } else {
+            // navigate to hyper link
+            navigate(href);
+        }
+    }
+
   return (
     <div className='navbar'>
         {/* Right section of Menubar */}
@@ -28,7 +45,7 @@ const Navbar: React.FC = () => {
             <MobileNavigation/>
             {/* Website's logo */}
             <div className='logo'>
-                <Link to='/'>Sajjad.dev</Link>
+            <button onClick={() => handleNavigate('/')}>Sajjad.dev</button>
             </div>
         </div>
         {/* Left section of Menubar */}
@@ -36,10 +53,11 @@ const Navbar: React.FC = () => {
             {/* Navigation links */}
             <ul>
             {MenuLinks.map((data, index)=> (
-                <li>
-                <Link key={index} className='nav-item' to={data.href}>
+                <li key={index}>
+                <button onClick={() => handleNavigate(data.href)}
+                className='nav-item' >
                     {data.name}
-                </Link>
+                </button>
                 </li>
             ))}
             </ul>
