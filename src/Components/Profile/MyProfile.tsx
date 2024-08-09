@@ -50,7 +50,10 @@ export const MyProfile: React.FC = () => {
             Elevating digital experiences with seamless
             innovation.Welcome to my virtual realm.</p>
         {/* Socila media section */}
-            <div className='socila-links'>
+            <div className='social-links'>
+
+                <button onClick={handleContact}>Contact Me!</button>
+                
                 <a href='https://www.linkedin.com/in/sajjad-ghaderi-7230821aa/'
                  target='_blank' rel="noopener noreferrer">
                     <BsLinkedin />
@@ -59,7 +62,7 @@ export const MyProfile: React.FC = () => {
                 rel="noopener noreferrer">
                     <FaSquareGithub />
                 </a>
-                <button onClick={handleContact}>Contact Me!</button>
+
             </div>
             {/* Skills section */}
             <div className='skills-section'>

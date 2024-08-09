@@ -1,49 +1,93 @@
 @import "../../Styles/mixins.scss";
 @import "../../Styles/variables.scss";
+// font family for headings 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Pacifico&display=swap');
+// font family for paragraph
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Pacifico&display=swap');
 
 
 .profile-content {
     @include Profile;
-    width: 100%;
+    width: 80%;
+    height: 100%;
+    border: 1px solid #ccc;
+    margin: auto;
 }
 
 .left {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 100vh;
-    background-color: $dark-background-color;
+    padding: 30px;
+    background-color: #000;
+
     img {
         width: 400px;
         height: 550px;
-        padding: 40px;
+        border: 2px solid $hover-text-color;
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; 
+        box-shadow: 0 0 35px $hover-text-color;
+        animation: linemoves 8s ease-in-out infinite;
     }
+
+    /* border lines moves */
+@keyframes linemoves {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
 }
 
-.rigth {
+// right section 
+.right {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 36px;
+        color: $text-color;
+    }
+    
+    p {
+        font-family: 'Mulish', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: $text-color;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+.social-links {
+    display: flex;
     gap: 20px;
-    width: 50%;
-    height: 100vh;
+    
+    button {
+        background-color: $hover-text-color;
+        color: $text-color;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        outline: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $dark-background-color;
+            color: $hover-text-color;
+        }
+        
+    }
 }
 
-.skills-section {
-    padding: 1rem;
-    display: flex;
-
-}
-
-.skills-section ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.skills-section li {
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
