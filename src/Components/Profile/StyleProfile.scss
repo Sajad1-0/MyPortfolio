@@ -10,16 +10,17 @@
     @include Profile;
     width: 80%;
     height: 100%;
-    border: 1px solid #ccc;
     margin: auto;
+    transition: all 0.5s ease-in-out;
 }
 
 .left {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
     padding: 30px;
-    background-color: #000;
+
 
     img {
         width: 400px;
@@ -28,6 +29,7 @@
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; 
         box-shadow: 0 0 35px $hover-text-color;
         animation: linemoves 8s ease-in-out infinite;
+        transition: all 0.5s ease-in-out;
     }
 
     /* border lines moves */
@@ -82,12 +84,181 @@
         font-size: 20px;
         transition: all 0.5s;
         cursor: pointer;
-
+        box-shadow: 0 0 10px $text-color;
         &:hover {
             background-color: $dark-background-color;
             color: $hover-text-color;
         }
         
     }
+
+    a {
+        color: #000;
+        font-size: 28px;
+        padding-top: 8px;
+        transition: all 0.3s;
+
+        &:hover{
+            color: #0077B5;
+            transform: scale(1.1) translateY(-5px);
+            &:hover:last-child {
+                color: #2b3137;
+            }
+        }
+    }
+
+    a:last-child {
+        font-size: 30px;
+        padding-top: 7px;
+    }
+   
+    
 }
 
+// skill section 
+.skills-section {
+    width: 500px;
+    display: flex;
+    margin-top: 70px;
+    
+    h2 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 28px;
+        color: $text-color;
+        cursor: pointer;
+        
+        &::after {
+            content: '|';
+            margin-left: 30px;
+        }
+    }
+
+
+   ul {
+    display: flex;
+    gap: 20px;
+    font-size: 28px;
+    list-style: none;
+    
+    li {
+        font-size: 30px;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1) translateY(-5px);
+            color: #FF0000;
+            
+            &:hover:nth-child(2) {
+                color: #2965f1;
+            }
+
+            &:hover:nth-child(3) {
+                color: rgb(219, 219, 55);
+            }
+
+            &:hover:nth-child(4) {
+                color: #3178c6;
+            }
+
+            &:hover:nth-child(5) {
+                color: #00d8ff;
+            }
+
+            &:hover:nth-child(6) {
+                color: #c3002f;
+            }
+
+            &:hover:nth-child(7) {
+                color: #CD6799;
+            }
+
+            &:hover:nth-child(8) {
+                color: #06b6d4;
+            }
+
+        }
+    }
+
+   }
+}
+
+
+// responsive design for profile section
+@media only screen and (max-width: 1280px) {
+
+   .profile-content {
+    flex-wrap: wrap;
+    
+    img {
+        transition: all 0.5s ease-in-out;
+    }
+   }
+}
+
+// for mobile devices
+@media only screen and (max-width: 768px) { 
+    
+    .profile-content {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .left {
+        background-color: transparent;
+
+        img {
+            width: 300px;
+            height: 400px;
+            transition: all 0.5 ease-in-out; // making decreasing of image width smooth
+        }
+    }
+
+    .right {
+        h1 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .social-links{
+            
+        button {
+            font-size: 18px;
+            padding: 4px 10px;
+        }
+
+        a {
+            font-size: 22px;
+        }
+
+        a:last-child {
+            font-size: 24px;
+        }
+    }
+
+    .skills-section {
+        width: 480px;
+
+        h2 {
+            font-size: 22px;
+        }
+        
+        ul {
+            font-size: 22px;
+
+            li {
+                font-size: 24px;
+            }
+        }
+    }
+
+    
+
+    
+}

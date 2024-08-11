@@ -4,11 +4,11 @@ import './StyleProfile.scss'
 import {useNavigate} from 'react-router-dom'
 import profilePhoto from '../../Assests/IMG_3272.jpeg'
 import { BsLinkedin } from "react-icons/bs";
-import { FaSquareGithub } from "react-icons/fa6";
+import { FaGithubSquare } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
-import { DiJavascript } from "react-icons/di";
-import { SiTypescript } from "react-icons/si";
+import { RiJavascriptFill } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
 import { FaReact } from "react-icons/fa";
 import { RiAngularjsLine } from "react-icons/ri";
 import { FaSass } from "react-icons/fa";
@@ -19,8 +19,8 @@ import { RiTailwindCssFill } from "react-icons/ri";
 const skills = [
     {id: 1, icon: <FaHtml5/>, title: 'HTML5'},
     {id: 2, icon: <FaCss3Alt/>, title: 'CSS'},
-    {id: 3, icon: <DiJavascript/>, title: 'JavaScript'},
-    {id: 4, icon: <SiTypescript/>, title: 'TypeScript'},
+    {id: 3, icon: <RiJavascriptFill/>, title: 'JavaScript'},
+    {id: 4, icon: <BiLogoTypescript/>, title: 'TypeScript'},
     {id: 5, icon: <FaReact/>, title: 'React'},
     {id: 6, icon: <RiAngularjsLine/>, title: 'Angular'},
     {id: 7, icon: <FaSass/>, title: 'Sass'},
@@ -41,7 +41,7 @@ export const MyProfile: React.FC = () => {
     <div className='profile-content'>
         {/* Profile picture on left side */}
         <div className='left'>
-            <img src={profilePhoto} alt="ME" />
+            <img  src={profilePhoto} alt="ME" />
         </div>
         {/* Bio and social media section */}
         <div className='right'>
@@ -60,13 +60,13 @@ export const MyProfile: React.FC = () => {
                 </a>
                 <a href='https://github.com/Sajad1-0' target='_blank'
                 rel="noopener noreferrer">
-                    <FaSquareGithub />
+                    <FaGithubSquare/>
                 </a>
 
             </div>
             {/* Skills section */}
             <div className='skills-section'>
-                <h2>Skills:</h2>
+                <h2>Skills</h2>
                 <ul>
                     {skills.map((skills) => (
                         <li key={skills.id}>
