@@ -1,3 +1,152 @@
 @import "../../Styles/mixins.scss";
 @import "../../Styles/variables.scss";
 
+.about-section {
+    @include Profile; // the same placement as the profile section
+    width: 80%;
+    height: 100%;
+    margin: 100px auto;
+}
+
+.left-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 10px 10rem;
+    border-right: 1px solid #000; 
+
+    h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 40px;
+        color: $text-color;
+        animation: letters 6s linear infinite alternate;
+
+        &:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 3s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 5s;
+        }
+
+        &:nth-child(5) {
+            animation-delay: 6s;
+        }
+
+        @keyframes letters {
+            0% {
+                color: #0077b5;
+                transform: translateX(0);
+                opacity: 1;
+            }
+            
+            50% {
+                color: $text-color;
+                transform: translateX(-10px);
+                opacity: 1;
+            }
+            75% {
+                color: #00d8ff;
+                transform: translate(0);
+                opacity: 0;
+            }
+            100% {
+                color: $text-color;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+// right section
+.right-about {
+    h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 800;
+        text-align: center;
+        line-height: 1.8;
+        padding: 10px 5rem;
+
+    }
+
+    p {
+        font-family: 'Mulish', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+// Responsive design for About section
+
+@media only screen and (max-width: 1280px) {
+    .about-section {
+        flex-wrap: wrap;
+        transform: all 0.5s ease-in-out;
+    }
+
+    .left-about {
+        flex-direction: row;
+        border-bottom: 1px solid #000;
+        border-right: none;
+
+        h1 {
+            letter-spacing: 35px;
+        }
+
+        @keyframes letters {
+            0% {
+                color: #0077b5;
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            50% {
+                color: $text-color;
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+            75% {
+                color: #00d8ff;
+                transform: translateY(0);
+                opacity: 0;
+            }
+            100% {
+                color: $text-color;
+                opacity: 0;
+            }
+        }
+    
+    }
+}
+
+// responsive for mobile devices
+@media only screen and (max-width: 768px) {
+    .about-section {
+        width: 100%;
+    }
+
+    .left-about {
+        h1 {
+            font-size: 30px;
+            letter-spacing: 10px;
+        }
+    }
+
+    // right section
+    .right-about {
+        h1 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+}
