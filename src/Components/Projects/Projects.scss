@@ -1,2 +1,83 @@
 @import "../../Styles/mixins.scss";
 @import "../../Styles/variables.scss";
+
+
+.p-sec {
+    height: 100%;
+    position: relative;
+    margin: 100px auto;
+
+    h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 40px;
+        text-align: center;
+        letter-spacing: 30px;
+        padding-bottom: 20px;
+        text-transform: uppercase;
+    }
+}
+
+.arrow-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; // Prevents the arrows from blocking clicks on other elements
+    .prev-icon, .next-icon {
+        font-size: 4rem;
+        padding: auto 20px;
+        cursor: pointer;
+        pointer-events: auto; // Allows clicking on the icons
+    }
+
+    .prev-icon {
+        position: absolute;
+        left: 20px; // Adjust distance from the left side
+      }
+  
+      .next-icon {
+        position: absolute;
+        right: 20px; // Adjust distance from the right side
+      }
+}
+
+.project-section {
+    @include Profile;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.project-left {
+        padding: 10px 20px;
+
+    img {
+        width: 500px;
+        height: 650px;
+        border-radius: 10px;
+    };
+}
+
+.project-right {
+    h2 {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 800;
+        font-size: 30px;
+        letter-spacing: 5px;
+        text-align: center;
+        line-height: 1.5;
+        padding: 10px 5rem;
+    }
+
+    p {
+        font-family: 'Mulish', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+
+
