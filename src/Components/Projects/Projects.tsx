@@ -5,6 +5,10 @@ import { IoIosArrowBack } from "react-icons/io";
 import { CgMediaLive } from "react-icons/cg";
 import { FaGithubSquare } from "react-icons/fa";
 import jerseySweden from '../../Assests/jersey-sweden.png'
+import { RiJavascriptFill } from "react-icons/ri";
+import { FaReact } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+
 
 type Projects = {
     id: number;
@@ -73,6 +77,16 @@ const MyProjects: React.FC = () => {
                     that the design is not only beautiful but also highly 
                     customizable, making your shopping experience as 
                     engaging as possible. At Jersey Sweden,</p>
+
+                    <div className='tech'>
+                        <h2>Tech:</h2>
+                        <ul>
+                            <li> <FaReact/> </li>
+                            <li> <RiJavascriptFill/> </li>
+                            <li> <RiTailwindCssFill/> </li>
+                        </ul>
+                    </div>
+
                     <div className='project-links'>
                     <a href={projects[currentProject].link} target='_blank' 
                     rel="noopener noreferrer">
