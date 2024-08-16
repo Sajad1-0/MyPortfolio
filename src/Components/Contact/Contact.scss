@@ -1,0 +1,93 @@
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+.contact-section {
+    height: 100%;
+    position: relative;
+    margin: 100px auto;
+
+    h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 40px;
+        text-align: center;
+        letter-spacing: 30px;
+        padding-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+.form-section {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
+.socialMedia {
+    h2 {
+        font-family: 'orbitron', sans-serif;
+        font-size: 28px;
+        text-align: center;
+        margin-left: 25px;
+    }
+    ul {
+        display: flex;
+        gap: 20px;
+        list-style-type:none;
+
+        li {
+            font-size: 25px;
+            transition: all 0.3s;
+            cursor: pointer;
+            
+            &:hover {
+                transform: scale(1.1) translateY(-5px);
+            }
+           
+            a {
+                color: #000;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: #1877F2;
+                }
+            }
+            .insta:hover {
+                color: #fa7e1e;
+            }
+            .linke:hover {
+                color: #0077B5;
+            }
+            .github:hover {
+                color:#2b3137;
+            }
+        }
+    }
+}
+
+form {
+
+    label {
+        font-family: 'Mulish', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        gap: 20px;
+
+        input {
+            width: 100px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            outline: none;
+            font-family: inherit;
+        }
+    }
+   
+}
