@@ -6,7 +6,7 @@ import Contact from '../Components/Contact/Contact'
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div id='home'>
       <MyProfile/>
       <About/>
       <Projects/>

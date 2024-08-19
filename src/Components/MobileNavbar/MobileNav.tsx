@@ -10,7 +10,7 @@ interface Menu {
 } 
 
 const MenuLinks: Menu[] = [
-    {name: 'Home', link: '/'},
+    {name: 'Home', link: '#home'},
     {name: 'About', link: '#about'},
     {name: 'Projects', link: '#projects'},
     {name: 'Contact', link: '#contact'}

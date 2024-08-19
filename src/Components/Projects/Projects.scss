@@ -147,6 +147,7 @@
             outline: none;
             padding: 10px 10px;
             font-size: 15px;
+            font-weight: 700;
             transition: all 0.5s;
             cursor: pointer;
             box-shadow: 0 0 10px $text-color;
@@ -216,6 +217,8 @@
 
         p {
             font-size: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 
@@ -240,7 +243,8 @@
            }
 
            button {
-            font-size: 10px;
+            font-size: 12px;
+            font-weight: 600;
            }
         }
 

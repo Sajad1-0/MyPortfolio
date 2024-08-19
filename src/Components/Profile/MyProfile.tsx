@@ -1,7 +1,6 @@
 
 import React from 'react'
 import './StyleProfile.scss'
-import {useNavigate} from 'react-router-dom'
 import profilePhoto from '../../Assests/IMG_3272.jpeg'
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
@@ -30,11 +29,12 @@ const skills = [
 
 export const MyProfile: React.FC = () => {
     
-    // navigate to contact section
-    const navigate = useNavigate();
+    // Navigate to constact section
     const handleContact = () => {
-        navigate('#contact');
+        const contactElement = document.getElementById('contact')
+        contactElement?.scrollIntoView({ behavior: 'smooth' });
     }
+    
 
 
   return (
