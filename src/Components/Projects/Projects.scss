@@ -92,7 +92,6 @@
         display: flex;
         gap: 20px;
         list-style: none;
-        padding-right: 120px;
         
         li {
             font-size: 30px;
@@ -173,7 +172,7 @@
 
 }
 
-// responsive design for mobile devices 
+// responsive design for tablets devices 
 @media only screen and (max-width: 768px) {
     .p-sec {
         
@@ -217,8 +216,6 @@
 
         p {
             font-size: 15px;
-            padding-left: 20px;
-            padding-right: 20px;
         }
     }
 
@@ -228,7 +225,6 @@
         }
 
         ul {
-            padding-right: 60px;
             li {
                 font-size: 25px;
                 padding-right: 15px;
@@ -249,5 +245,49 @@
         }
 
         
+    }
+}
+
+// responsive design for phones
+@media only screen and (max-width: 430px) {
+    .p-sec {
+        .arrow-icons {
+            .prev-icon, .next-icon {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .project-section {
+        .project-left {
+            img {
+                width: 260px;
+                height: 300px;
+            }
+        }
+
+        .project-right {
+            h2 {
+                font-size: 15px;
+                padding: 5px 2rem;
+            }
+
+            p {
+                font-size: 12px;
+                margin: 10px auto;
+                padding: 2px 15px;
+            }
+        }
+    }
+
+    .tech {
+        gap: 2px;
+
+        ul {
+            li {
+                font-size: 25px;
+                padding-right: 10px;
+            }
+        }
     }
 }

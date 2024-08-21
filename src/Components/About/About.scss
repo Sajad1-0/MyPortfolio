@@ -99,35 +99,13 @@
 
         h1 {
             letter-spacing: 35px;
-        }
-
-        @keyframes letters {
-            0% {
-                color: #0077b5;
-                transform: translateY(0);
-                opacity: 1;
-            }
-            
-            50% {
-                color: $text-color;
-                transform: translateY(-10px);
-                opacity: 1;
-            }
-            75% {
-                color: #00d8ff;
-                transform: translateY(0);
-                opacity: 0;
-            }
-            100% {
-                color: $text-color;
-                opacity: 0;
-            }
+            animation: none;
         }
     
     }
 }
 
-// responsive for mobile devices
+// responsive for smaller devices
 @media only screen and (max-width: 768px) {
     .about-section {
         width: 100%;
@@ -137,7 +115,6 @@
         h1 {
             font-size: 30px;
             letter-spacing: 10px;
-            animation: none;
         }
     }
 
@@ -151,6 +128,28 @@
             font-size: 15px;
             padding-left: 20px;
             padding-right: 20px;
+        }
+    }
+}
+
+// responsive for mobile devices
+@media only screen and (max-width: 430px) {
+    .left-about {
+        display: flex;
+        justify-content: center;
+        padding: 10px 5rem;
+    }
+
+    .right-about {
+        h1 {
+            font-size: 15px;
+            padding: 10px 10px;
+        }
+
+        p {
+            font-size: 13px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
     }
 }

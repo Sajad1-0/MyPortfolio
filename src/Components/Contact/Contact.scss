@@ -38,7 +38,9 @@
     }
     ul {
         display: flex;
+        justify-content: center;
         gap: 20px;
+        margin-right: 50px;
         list-style-type:none;
 
         li {
@@ -138,7 +140,7 @@ form {
     }
 }
 
-// responsive design for mobile devices
+// responsive design for tablets devices
 @media only screen and (max-width: 978px) {
    .contact-section {
 
@@ -152,7 +154,37 @@ form {
    
     .form-section {
         flex-direction: column-reverse;
+
+        .submit {
+            width: 100%;
+        }
+    }
+}
+
+// responsive design for mobile devices
+@media only screen and (max-width: 430px) {
+    
+
+    form {
+        label {
+            input {
+                width: 150px;
+            }
+            textarea {
+                width: 250px;
+            }
+        }
     }
 
-   
+    .socialMedia {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            margin: 20px auto;
+        }
+
+        
+    }
 }

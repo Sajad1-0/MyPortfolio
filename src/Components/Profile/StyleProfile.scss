@@ -195,7 +195,7 @@
    }
 }
 
-// for mobile devices
+// for smaller devices
 @media only screen and (max-width: 768px) { 
     
     .profile-content {
@@ -261,3 +261,51 @@
 
     
 }
+
+// for mobile devices
+@media only screen and (max-width: 430px) {
+    .profile-content {
+        display: block;
+        margin-top: 10px;
+    }
+        
+    .right {
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .skills-section {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-size: 22px;
+            text-align: center;
+
+            &::after {
+                content: '';
+                margin-left: 0;
+            }
+        }
+        
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 2px 20px;
+            
+
+            li {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
