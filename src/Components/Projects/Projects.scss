@@ -17,40 +17,15 @@
     }
 }
 
-.arrow-icons {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none; // Prevents the arrows from blocking clicks on other elements
-    .prev-icon, .next-icon {
-        font-size: 4rem;
-        padding: auto 20px;
-        cursor: pointer;
-        pointer-events: auto; // Allows clicking on the icons
-    }
 
-    .prev-icon {
-        position: absolute;
-        left: 20px; // Adjust distance from the left side
-      }
-  
-      .next-icon {
-        position: absolute;
-        right: 20px; // Adjust distance from the right side
-      }
-}
 
 .project-section {
     @include Profile;
     width: 80%;
-    margin: 50px auto;
+    margin: auto;
 }
 
 .project-left {
-        padding: 10px 20px;
 
     img {
         width: 500px;
@@ -67,7 +42,6 @@
         letter-spacing: 5px;
         text-align: center;
         line-height: 1.5;
-        padding: 10px 5rem;
     }
 
     p {
@@ -97,22 +71,55 @@
             font-size: 30px;
             transition: all 0.3s;
             cursor: pointer;
+            
+             &:hover {
+        transform: scale(1.1) translateY(-5px);
+    }
     
-            &:hover {
-                transform: scale(1.1) translateY(-5px);
-                color: #00d8ff;
-                
-                
+    &.tech-react:hover {
+        color: #61dafb;
+    }
     
-                &:hover:nth-child(2) {
-                    color: rgb(219, 219, 55);
-                }
+    &.tech-javascript:hover {
+        color: #f7df1e;
+    }
     
-                &:hover:nth-child(3) {
-                    color: #06b6d4;
-                }
+    &.tech-tailwind:hover {
+        color: #06b6d4;
+    }
     
-            }
+    &.tech-typescript:hover {
+        color: #3178c6;
+    }
+    
+    &.tech-java:hover {
+        color: #007396;
+    }
+    
+    &.tech-springboot:hover {
+        color: #6db33f;
+    }
+    
+    &.tech-drizzle:hover {
+        color: #C5F74F;
+    }
+    
+    &.tech-nodejs:hover {
+        color: #339933;
+    }
+    
+    &.tech-docker:hover {
+        color: #2496ed;
+    }
+    
+    &.tech-mysql:hover {
+        color: #4479a1;
+    }
+    
+    &.tech-sass:hover {
+        color: #cc6699;
+    }
+            
         }
     
        }

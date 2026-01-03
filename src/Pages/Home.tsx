@@ -8,8 +8,8 @@ const Home: React.FC = () => {
   return (
     <div id='home'>
       <MyProfile/>
-      <About/>
       <Projects/>
+      <About/>
       <Contact/>
     </div>
   )

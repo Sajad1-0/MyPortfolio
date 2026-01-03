@@ -1,6 +1,6 @@
-
 import React from 'react'
 import './StyleProfile.scss'
+import { UserData } from '../../constants'; 
 import profilePhoto from '../../Assests/IMG_3272.jpeg'
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
@@ -45,10 +45,8 @@ export const MyProfile: React.FC = () => {
         </div>
         {/* Bio and social media section */}
         <div className='right'>
-            <h1>Frontend-developer</h1>
-            <p>Hi👋, I'm Sajjad Ghaderi, the developer. 
-            Elevating digital experiences with seamless
-            innovation.Welcome to my virtual realm.</p>
+            <h1>{UserData.title}</h1>
+            <p>{UserData.bio}</p>
         {/* Socila media section */}
             <div className='social-links'>
 
@@ -63,17 +61,6 @@ export const MyProfile: React.FC = () => {
                     <FaGithubSquare/>
                 </a>
 
-            </div>
-            {/* Skills section */}
-            <div className='skills-section'>
-                <h2>Skills</h2>
-                <ul>
-                    {skills.map((skills) => (
-                        <li key={skills.id}>
-                            {skills.icon} 
-                        </li>
-                    ))}
-                </ul>
             </div>
         </div>
     </div>
