@@ -38,7 +38,7 @@ const MyProjects = () => {
                                 {project.Technologies.map((tech, index) => {
                                     const TechIcon = tech.icon;
                                     return (
-                                        <li key={index} className={`tech-icon tech-${tech.name}`}> 
+                                        <li key={index} className={`tech tech-${tech.name}`}> 
                                             <TechIcon/> 
                                         </li>
                                     );
