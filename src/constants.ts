@@ -2,6 +2,8 @@ import React from "react";
 import { Projects, Tech } from "./types"
 import jerseySweden from './Assests/jersey-sweden.png'
 import spotly from './Assests/Spotly.png'
+import { CgMediaLive } from "react-icons/cg";
+import { FaGithubSquare } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
 import { FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -20,7 +22,8 @@ import { SiPostgresql } from "react-icons/si";
 
 
 
-
+export const LIVE_DEMO = { icon: CgMediaLive, name: 'liveDemo' };
+export const GITHUB = { icon: FaGithubSquare, name: 'github' };
 export const TECH_REACT = { icon: FaReact, name: 'react' };
 export const TECH_JAVASCRIPT = { icon: RiJavascriptFill, name: 'javascript' };
 export const TECH_TAILWIND = { icon: RiTailwindCssFill, name: 'tailwind' };

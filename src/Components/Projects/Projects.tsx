@@ -1,19 +1,9 @@
-import React, {useState, useCallback} from 'react'
 import './Projects.scss'
 import { Project } from '../../constants';
 import { CgMediaLive } from "react-icons/cg";
 import { FaGithubSquare } from "react-icons/fa";
-import jerseySweden from '../../Assests/jersey-sweden.png'
-import { RiJavascriptFill } from "react-icons/ri";
-import { FaReact } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
 
 
-type Projects = {
-    id: number;
-    name: string;  
-    link: any;
-}
 
 const MyProjects = () => {
 
@@ -51,7 +41,7 @@ const MyProjects = () => {
                                         <button> <CgMediaLive />Live Demo</button>
                                     </a>
                                 )}
-                                <a href={project.githubLink} target='_blank' rel='noopener noreferrer'>
+                                <a href={project.githubLink} target='_blank' rel='noopener noreferrer' className={`github`}>
                                     <FaGithubSquare />
                                 </a>
                         </div>

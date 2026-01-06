@@ -23,13 +23,14 @@
     @include Profile;
     width: 80%;
     margin: auto;
+    padding-top: 50px;
 }
 
 .project-left {
 
     img {
-        width: 500px;
-        height: 650px;
+        width: 300px;
+        height: 450px;
         border-radius: 10px;
     };
 }
@@ -45,8 +46,10 @@
     }
 
     p {
+        width: 80%;
+        margin: 20px auto;
         font-family: 'Mulish', sans-serif;
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 600;
         line-height: 1.5;
         text-align: center;
@@ -149,12 +152,13 @@
         color: #000;
         transition: all 0.3s;
 
-        &:nth-child(2) {
+        &.github {
             margin-top: 20px;
             font-size: 40px;
+            
         }
 
-        &:nth-child(2):hover {
+        &.github:hover {
             color: #2b3137;
             transform: scale(1.1) translateY(-5px);
         }
@@ -203,19 +207,6 @@
             border-bottom: 1px solid #000;
         }
 
-        .arrow-icons {
-            .prev-icon, .next-icon {
-                font-size: 2rem;
-            }
-        }
-
-        .prev-icon {
-            left: 5px;
-        }
-
-        .next-icon {
-            right: 5px;
-        }
     }
 
     .project-section {
