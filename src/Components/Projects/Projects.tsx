@@ -20,12 +20,12 @@ const MyProjects = () => {
 
                     <div className='project-right'>
                         <h2>{project.title}</h2>
-                        <p>{project.description}</p>
+                        <p style={{ whiteSpace: 'pre-line'}}>{project.description}</p>
 
                         <div className='tech'>
                             <h2>Tech:</h2>
                             <ul>
-                                {project.Technologies.map((tech, index) => {
+                                {project.technologies.map((tech, index) => {
                                     const TechIcon = tech.icon;
                                     return (
                                         <li key={index} className={`tech tech-${tech.name}`}> 

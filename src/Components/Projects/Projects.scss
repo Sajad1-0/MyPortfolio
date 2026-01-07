@@ -51,8 +51,7 @@
         font-family: 'Mulish', sans-serif;
         font-size: 18px;
         font-weight: 600;
-        line-height: 1.5;
-        text-align: center;
+        line-height: 1.2;
     }
 }
 
@@ -144,6 +143,7 @@
 .project-links {
     display: flex; 
     justify-content: center;
+    align-items: center;
     gap: 20px;
 
     a {
@@ -231,6 +231,8 @@
     }
 
     .tech {
+        display: flex;
+        justify-content: center;
         h2 {
             font-size: 15px;
         }
@@ -238,14 +240,14 @@
         ul {
             li {
                 font-size: 25px;
-                padding-right: 15px;
+                
             }
         }
     }
-
     .project-links {
+
         a {
-           &:nth-child(2) {
+           &.github {
             font-size: 30px;
            }
 
@@ -253,21 +255,13 @@
             font-size: 12px;
             font-weight: 600;
            }
-        }
-
-        
+        }   
     }
+
 }
 
 // responsive design for phones
 @media only screen and (max-width: 430px) {
-    .p-sec {
-        .arrow-icons {
-            .prev-icon, .next-icon {
-                font-size: 1rem;
-            }
-        }
-    }
 
     .project-section {
         .project-left {
@@ -280,7 +274,7 @@
         .project-right {
             h2 {
                 font-size: 15px;
-                padding: 5px 2rem;
+                padding: 5px 0;
             }
 
             p {
@@ -292,12 +286,39 @@
     }
 
     .tech {
-        gap: 2px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
         ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
             li {
+                display: flex;
+                flex-wrap: wrap;
                 font-size: 25px;
                 padding-right: 10px;
+                padding: 0;
+            }
+        }
+    }
+
+    .project-links {
+        justify-content: center;  // Ensure links are centered
+        gap: 15px;  // Reduce gap for smaller screens
+        
+        a {
+            padding-right: 0;  // Remove the 40px padding
+            
+            &.github {
+                font-size: 30px;
+            }
+            
+            button {
+                font-size: 12px;
+                padding: 8px 8px;
             }
         }
     }

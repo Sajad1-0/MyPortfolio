@@ -10,7 +10,7 @@ export interface Projects {
     liveDemo?: string;
     githubLink: string;
     image: string;
-    Technologies: TechConfig[];
+    technologies: TechConfig[];
 }
 
 

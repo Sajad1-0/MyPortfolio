@@ -1,4 +1,3 @@
-import React from "react";
 import { Projects, Tech } from "./types"
 import jerseySweden from './Assests/jersey-sweden.png'
 import spotly from './Assests/Spotly.png'
@@ -11,9 +10,8 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { FaSass } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 import { BiLogoSpringBoot } from "react-icons/bi";
-import { SiMysql } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
 import { FaNodeJs } from "react-icons/fa";
-
 import { DiDocker } from "react-icons/di";
 import { SiDrizzle } from "react-icons/si";
 import { SiApachemaven } from "react-icons/si";
@@ -31,13 +29,14 @@ export const TECH_TYPESCRIPT = { icon: BiLogoTypescript, name: 'typescript' };
 export const TECH_SASS = { icon: FaSass, name: 'sass' };
 export const TECH_JAVA = { icon: FaJava, name: 'java' };
 export const TECH_SPRINGBOOT = { icon: BiLogoSpringBoot, name: 'springboot' };
-export const TECH_MYSQL = { icon: SiMysql, name: 'mysql' };
+export const TECH_MYSQL = { icon: GrMysql, name: 'mysql' };
 export const TECH_NODEJS = { icon: FaNodeJs, name: 'nodejs' };
 export const TECH_DOCKER = { icon: DiDocker, name: 'docker' };
 export const TECH_DRIZZLE = { icon: SiDrizzle, name: 'drizzle' };
 export const TECH_MAVEN = { icon: SiApachemaven, name: 'maven'};
 export const TECH_EXPRESS = { icon: SiExpress, name: 'express' };
 export const TECH_POSTGRESQL = { icon: SiPostgresql, name: 'postgresql'}
+
 
 export const UserData = {
     name: 'Sajjad Ghaderi',
@@ -51,27 +50,49 @@ export const UserData = {
 export const Project: Projects[] =[
     {
        id: 0,
-       title: "Jersey Sweden",
-       description: `A complete football jersey marketplace built with a modern tech stack. 
-       Features a responsive React frontend for seamless shopping and a robust Java Spring Boot 
-       backend handling inventory, orders, and payments. This project demonstrates end-to-end 
-       development capability from UI design to database architecture. 
-       Backend and frontend are not connected yet.`,
+       title: "Jersey Sweden - Frontend",
+       description: `A responsive React application for a football jersey marketplace, built with JavaScript and TailwindCSS. Features product filtering, shopping cart management, and intuitive user flows for seamless online shopping. 
+       
+       Key Features:
+
+      - Product catalog with category filtering.
+
+      - Interactive shopping cart with real-time updates. 
+
+      - Responsive design across all device sizes.
+
+      - Clean, modern UI with TailwindCSS utilities.`,
        image: jerseySweden,
        liveDemo: 'https://sajad1-0.github.io/jerseySweden/',
        githubLink: 'https://github.com/Sajad1-0/jerseySweden',
-       Technologies: [TECH_REACT, TECH_JAVASCRIPT, TECH_TAILWIND, TECH_JAVA, TECH_SPRINGBOOT, TECH_MAVEN]
+       technologies: [TECH_REACT, TECH_JAVASCRIPT, TECH_TAILWIND]
    },
    {
-    id: 1,
+    id:1, 
+    title: "Jersey Sweden - Backend",
+    description: `A robust Java Spring Boot backend for football jersey e-commerce, handling product management, order processing, and inventory tracking with RESTful API design.
+    Core Functionality:
+
+   - Product catalog management (CRUD operations)
+
+   - Order processing with validation
+
+   - Inventory tracking and stock management
+
+   - Category and product relationships
+
+   - Secure API endpoints`,
+   image: jerseySweden,
+   githubLink: 'https://github.com/Sajad1-0/Backend-JerseySweden',
+   technologies: [TECH_JAVA, TECH_SPRINGBOOT, TECH_MAVEN, TECH_MYSQL]
+   },
+   {
+    id: 2,
     title: "Spotly",
-    description: `A production-ready RESTful API for managing workspace and conference room 
-    bookings. Built with Node.js and TypeScript, featuring JWT authentication, room availability 
-    checking, and booking conflict prevention. Containerized with Docker for easy deployment and 
-    scalability.`,
+    description: `A production-ready RESTful API for managing workspace and conference room bookings. Built with Node.js and TypeScript, featuring JWT authentication, room availability checking, and booking conflict prevention. Containerized with Docker for easy deployment and scalability.`,
     image: spotly,
     githubLink: 'https://github.com/Sajad1-0/Spotly',
-    Technologies: [TECH_NODEJS, TECH_TYPESCRIPT, TECH_EXPRESS, TECH_POSTGRESQL, TECH_DRIZZLE, TECH_DOCKER]
+    technologies: [TECH_NODEJS, TECH_TYPESCRIPT, TECH_EXPRESS, TECH_POSTGRESQL, TECH_DRIZZLE, TECH_DOCKER]
    }
 
 ]
