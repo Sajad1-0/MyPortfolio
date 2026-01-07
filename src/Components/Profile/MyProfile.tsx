@@ -1,6 +1,6 @@
 import React from 'react'
 import './StyleProfile.scss'
-import { UserData } from '../../constants'; 
+import { UserData } from '../../data/constants'; 
 import profilePhoto from '../../Assests/IMG_3272.jpeg'
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";

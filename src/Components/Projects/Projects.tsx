@@ -1,5 +1,5 @@
 import './Projects.scss'
-import { Project } from '../../constants';
+import { Project } from '../../data/project';
 import { CgMediaLive } from "react-icons/cg";
 import { FaGithubSquare } from "react-icons/fa";
 
