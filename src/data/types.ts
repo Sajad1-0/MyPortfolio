@@ -19,3 +19,17 @@ export interface Tech {
     name: string;
     icon: string;
 }
+
+export interface WorkExperience {
+    id: number;
+    title: string;
+    role?: string;
+    description?: string;
+    tech?: {
+        frontend?: TechConfig[],
+        backend?: TechConfig[],
+        tools?: TechConfig[]
+    };
+    startTime?: Date;
+    endTime?: Date;
+}
