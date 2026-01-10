@@ -20,11 +20,19 @@ import { SiNextdotjs } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { SiFastapi } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { SiJest } from "react-icons/si";
+import { SiSwagger } from "react-icons/si";
+import { SiPostman } from "react-icons/si";
 
 
 
 
 
+
+export const TECH_HTML = { icon: FaHtml5, name: 'html' };
+export const TECH_CSS = { icon: FaCss3Alt, name: 'css' };
 export const GIT = { icon: FaGitAlt, name: 'git' };
 export const MONOREPO = { icon: RiGitRepositoryCommitsFill, name: 'Monorepo'}
 export const LIVE_DEMO = { icon: CgMediaLive, name: 'liveDemo' };
@@ -47,6 +55,10 @@ export const TECH_PYTHON = { icon: FaPython, name: 'python'}
 export const TECH_NEXTJS = { icon: SiNextdotjs, name: 'next.js'}
 export const TECH_REACTNATIVE = { icon: TbBrandReactNative, name: 'reactnative'}
 export const TECH_FASTAPI = { icon: SiFastapi, name: 'fastapi'}
+export const TECH_JEST = { icon: SiJest, name: 'jest'}
+export const TECH_SWAGGER = { icon: SiSwagger, name: 'swagger'}
+export const TECH_POSTMAN = { icon: SiPostman, name: 'postman' }
+
 
 
 export const UserData = {

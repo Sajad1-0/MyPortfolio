@@ -34,3 +34,10 @@ export interface WorkExperience {
     startTime?: Date;
     endTime?: Date;
 }
+
+export interface Skill {
+    name: string;
+    category: 'frontend' | 'backend' | 'tools' | 'database';
+    icon: React.ComponentType;
+    level: 1 | 2 | 3 | 4 | 5; // 5 expert, 1 beginner
+}
