@@ -19,11 +19,13 @@ import { RiGitRepositoryCommitsFill } from "react-icons/ri";
 import { SiNextdotjs } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { SiFastapi } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
 
 
 
 
 
+export const GIT = { icon: FaGitAlt, name: 'git' };
 export const MONOREPO = { icon: RiGitRepositoryCommitsFill, name: 'Monorepo'}
 export const LIVE_DEMO = { icon: CgMediaLive, name: 'liveDemo' };
 export const GITHUB = { icon: FaGithubSquare, name: 'github' };

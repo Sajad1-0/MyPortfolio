@@ -30,6 +30,7 @@ export interface WorkExperience {
         backend?: TechConfig[],
         tools?: TechConfig[]
     };
+    image?: string;
     startTime?: Date;
     endTime?: Date;
 }
