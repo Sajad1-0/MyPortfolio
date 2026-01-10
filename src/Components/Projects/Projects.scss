@@ -55,7 +55,7 @@
     }
 }
 
-.tech {
+.p-sec .tech {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,12 +199,12 @@
 // responsive design for tablets devices 
 @media only screen and (max-width: 768px) {
     .p-sec {
-        
         h1 {
             font-size: 30px;
             letter-spacing: 10px;
             margin: auto;
             border-bottom: 1px solid #000;
+            width: 80%;
         }
 
     }
@@ -230,16 +230,32 @@
         }
     }
 
-    .tech {
+    .p-sec .tech {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         h2 {
             font-size: 15px;
         }
 
         ul {
+            padding: 0;
             li {
                 font-size: 25px;
+                &.tech-react { color: #61dafb; }
+                &.tech-javascript { color: #f7df1e; }
+                &.tech-tailwind { color: #06b6d4; }
+                &.tech-typescript { color: #3178c6; }
+                &.tech-java { color: #007396; }
+                &.tech-springboot { color: #6db33f; }
+                &.tech-drizzle { color: #C5F74F; }
+                &.tech-nodejs { color: #339933; }
+                &.tech-docker { color: #2496ed; }
+                &.tech-mysql { color: #4479a1; }
+                &.tech-sass { color: #cc6699; }
+                &.tech-express { color: #68a063; }
+                &.tech-maven { color: #C71A36; }
+                &.tech-postgresql { color: #4169E1; }
                 
             }
         }
@@ -278,17 +294,17 @@
             }
 
             p {
-                font-size: 12px;
+                font-size: 15px;
                 margin: 10px auto;
                 padding: 2px 15px;
             }
         }
     }
 
-    .tech {
+    .p-sec .tech {
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
+        align-items: center;;
 
         ul {
             display: flex;

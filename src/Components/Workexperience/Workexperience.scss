@@ -88,8 +88,8 @@
         // When expanded, show all lines
         &.expanded {
             -webkit-line-clamp: unset;
-            max-height: 500px;
-            transition: max-height 0.8s ease-in;
+            max-height: 1000px; // Arbitrary large value to allow full expansion
+            transition: 0.8s ease-in;
         }
     }
     
@@ -115,7 +115,7 @@
 
 }
 
-.tech {
+.work-experience .tech {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,6 +168,89 @@
                 &.tech-monorepo:hover { color: #764abc; }
                 &.tech-github:hover { color: #181717; }
                 &.tech-git:hover { color: #F05032; }
+            }
+        }
+    }
+}
+
+
+// Responsive design for tablets devices
+@media only screen and (max-width: 1280px) {
+    .work-experience {
+        h1 {
+            font-size: 30px;
+            letter-spacing: 10px;
+        }
+    }
+
+    .work-card {
+        flex-direction: column;
+
+        .work-card-left {
+            img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        .work-card-right {
+            h1 {
+                font-size: 25px;
+                text-align: center;
+                
+            }
+            h2 {
+                font-size: 20px;
+                text-align: center;
+            }
+            h4 {
+                font-size: 14px;
+                text-align: center;
+            }
+            p {
+                font-size: 15px;
+                margin: auto;
+                text-align: center;
+            }
+
+            .expand-button {
+                margin: auto;
+            }
+        }
+    }
+
+    .work-experience .tech {
+        flex-direction: column;
+        margin-top: 10px;
+
+        ul {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 0;
+            
+            .tech-icon {
+                &.tech-react { color: #61dafb; }
+                &.tech-nextjs { color: #000; }
+                &.tech-reactnative { color: #61dafb; }
+                &.tech-javascript { color: #f7df1e; }
+                &.tech-tailwind { color: #06b6d4; }
+                &.tech-typescript { color: #3178c6; }
+                &.tech-java { color: #007396; }
+                &.tech-springboot { color: #6db33f; }
+                &.tech-drizzle { color: #C5F74F; }
+                &.tech-nodejs { color: #339933; }
+                &.tech-docker { color: #2496ed; }
+                &.tech-mysql { color: #4479a1; }
+                &.tech-sass { color: #cc6699; }
+                &.tech-express { color: #68a063; }
+                &.tech-maven { color: #C71A36; }
+                &.tech-postgresql { color: #4169E1; }
+                &.tech-python { color: #3776ab; }
+                &.tech-fastapi { color: #009688; }
+                &.tech-monorepo { color: #764abc; }
+                &.tech-github { color: #181717; }
+                &.tech-git { color: #F05032; }
             }
         }
     }

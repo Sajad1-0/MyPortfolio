@@ -39,7 +39,7 @@ export const WorkExperiences: WorkExperience[] = [
     },
     {
         id: 1,
-        title: 'Skolverket (The Swedish National Agency for Education)',
+        title: 'Skolverket',
         role: 'Frontend Developer Intern',
         description: `
         • Developed college comparison features for Sweden's national education platform, used by thousands of students

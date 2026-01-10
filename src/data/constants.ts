@@ -13,7 +13,7 @@ import { DiDocker } from "react-icons/di";
 import { SiDrizzle } from "react-icons/si";
 import { SiApachemaven } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
-import { SiPostgresql } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
 import { FaPython } from "react-icons/fa";
 import { RiGitRepositoryCommitsFill } from "react-icons/ri";
 import { SiNextdotjs } from "react-icons/si";
@@ -42,7 +42,7 @@ export const TECH_DOCKER = { icon: DiDocker, name: 'docker' };
 export const TECH_DRIZZLE = { icon: SiDrizzle, name: 'drizzle' };
 export const TECH_MAVEN = { icon: SiApachemaven, name: 'maven'};
 export const TECH_EXPRESS = { icon: SiExpress, name: 'express' };
-export const TECH_POSTGRESQL = { icon: SiPostgresql, name: 'postgresql'}
+export const TECH_POSTGRESQL = { icon: BiLogoPostgresql, name: 'postgresql'}
 export const TECH_PYTHON = { icon: FaPython, name: 'python'}
 export const TECH_NEXTJS = { icon: SiNextdotjs, name: 'next.js'}
 export const TECH_REACTNATIVE = { icon: TbBrandReactNative, name: 'reactnative'}
