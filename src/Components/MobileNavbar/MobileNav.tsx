@@ -14,6 +14,7 @@ const MenuLinks: Menu[] = [
     {name: 'About', link: '#about'},
     {name: 'Projects', link: '#projects'},
     {name: 'Work Experience', link: '#workexperience'},
+    {name: 'Skills', link: '#skills'},
     {name: 'Contact', link: '#contact'}
 ]
 

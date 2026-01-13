@@ -21,8 +21,8 @@
     @include Profile;
     width: 80%;
     margin: auto;
-    padding-top: 50px;
-    display: grid;                                   
+    display: grid;       
+    padding-top: 30px;                            
     grid-template-columns: repeat(2, 1fr);           // ✅ 4 equal columns
     gap: 40px 60px;                                  // ✅ row-gap column-gap
     align-items: start;                              // ✅ Align titles to top
@@ -31,11 +31,15 @@
 // Category section
 .skill-category {
     h2 {
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'Mulish', sans-serif;
         font-weight: 800;
         font-size: 30px;
         letter-spacing: 5px;
         text-align: center;
+
+        &::after {
+            content: '' !important;
+        }
     }
 }
 

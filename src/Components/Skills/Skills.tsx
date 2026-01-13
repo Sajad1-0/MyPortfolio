@@ -5,10 +5,10 @@ import './Skills.scss'
 export const Skills = () => {
 
     const categories = [
-    { key: 'frontend', label: 'Frontend Development', icon: '🎨' },
-    { key: 'backend', label: 'Backend Development', icon: '⚙️' },
-    { key: 'database', label: 'Database', icon: '🗄️' },
-    { key: 'tools', label: 'Tools & Technologies', icon: '🛠️' }
+    { key: 'frontend', label: 'Frontend Development' },
+    { key: 'backend', label: 'Backend Development' },
+    { key: 'database', label: 'Database' },
+    { key: 'tools', label: 'Tools & Technologies' }
   ];
 
   // Helper function: filter skills by category
@@ -37,7 +37,6 @@ export const Skills = () => {
                     <SkillCategory
                         key={category.key}
                         title={category.label}
-                        icon={category.icon}
                         skills={categorySkills}
                         startIndex={currentIndex}
                     />
