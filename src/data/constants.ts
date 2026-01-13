@@ -25,6 +25,7 @@ import { FaCss3Alt } from "react-icons/fa";
 import { SiJest } from "react-icons/si";
 import { SiSwagger } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
+import { title } from "process";
 
 
 
@@ -70,6 +71,19 @@ export const UserData = {
     development.`
 } 
 
+export const AboutMeData = {
+    subTitle: `What makes me unique:`,
+    description1: `Full Stack Developer with expertise across Java/Python and JavaScript/TypeScript ecosystems. My journey spans from creating intuitive interfaces at Sweden's National Agency for Education to developing AI-driven components at a tech startup, giving me unique perspective on both enterprise and agile development environments.`,
+    description2: `• AI Interface Innovation: Developed adaptive UI components that change based on user prompts for my thesis project
+    • Dual-Stack Expertise: Proficient in both Java/Python backend and React/TypeScript frontend
+    • Real-World Experience: Contributed to production systems at government (Skolverket) and startup (Fixmeapp) levels
+    • Fast Learner & Driven: Continuously expanding my skills with curiosity and determination`,
+    description3: `Collaboration is at the heart of my work. I thrive in dynamic environments where cross-functional teamwork transforms ideas into reality. By fostering open communication and embracing feedback, I believe in the collective power of teams to drive innovation and solve complex problems.`,
+    subTitle2: `Beyond Coding:`,
+    lastDescription: `🥊 Boxing & Strength Training teach me focus, discipline, and continuous improvement—qualities I bring to every development challenge.
+    🥾 Hiking & Reading provide balance and fresh perspectives, often sparking creative solutions to technical problems.
+    Currently seeking fullstack developer roles where I can contribute to meaningful digital products and continue growing as a professional.`
+}
 
     
 
