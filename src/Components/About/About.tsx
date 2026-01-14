@@ -1,12 +1,14 @@
 import React from 'react'
 import './About.scss'
 import { AboutMeData } from '../../data/constants'
+import { useInView } from '../../Hooks/useInView'
 
-const About: React.FC = () => {
+const About = () => {
+  const { ref, isInView } = useInView();
 
   return (
     <div id='about' className='about-section'>
-      <div className='left-about'>
+      <div ref={ref} className={`left-about ${isInView ? 'animate' : ''}`}>
         <h1>A</h1>
         <h1>B</h1>
         <h1>O</h1>

@@ -8,7 +8,8 @@
     margin: 100px auto;
 
     h1 {
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
         font-size: 40px;
         text-align: center;
         letter-spacing: 30px;
@@ -37,8 +38,8 @@
 
 .project-right {
     h2 {
-        font-family: 'Orbitron', sans-serif;
-        font-weight: 800;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
         font-size: 30px;
         letter-spacing: 5px;
         text-align: center;
@@ -48,9 +49,9 @@
     p {
         width: 80%;
         margin: 20px auto;
-        font-family: 'Mulish', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 1.2;
     }
 }
@@ -75,7 +76,7 @@
             cursor: pointer;
             
              &:hover {
-        transform: scale(1.1) translateY(-5px);
+            transform: scale(1.1) translateY(-5px);
     }
     
     &.tech-react:hover {

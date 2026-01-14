@@ -55,15 +55,16 @@
     align-items: center;
     
     h1 {
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
         font-size: 36px;
         text-align: center;
     }
     
     p {
-        font-family: 'Mulish', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 1.5;
         text-align: center;
     }
@@ -112,74 +113,6 @@
     }
    
     
-}
-
-// skill section 
-.skills-section {
-    width: 500px;
-    display: flex;
-    margin-top: 70px;
-    
-    h2 {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 28px;
-        color: $text-color;
-        cursor: pointer;
-        
-        &::after {
-            content: '|';
-            margin-left: 30px;
-        }
-    }
-
-
-   ul {
-    display: flex;
-    gap: 20px;
-    font-size: 28px;
-    list-style: none;
-    
-    li {
-        font-size: 30px;
-        transition: all 0.3s;
-        cursor: pointer;
-
-        &:hover {
-            transform: scale(1.1) translateY(-5px);
-            color: #FF0000;
-            
-            &:hover:nth-child(2) {
-                color: #2965f1;
-            }
-
-            &:hover:nth-child(3) {
-                color: rgb(219, 219, 55);
-            }
-
-            &:hover:nth-child(4) {
-                color: #3178c6;
-            }
-
-            &:hover:nth-child(5) {
-                color: #00d8ff;
-            }
-
-            &:hover:nth-child(6) {
-                color: #c3002f;
-            }
-
-            &:hover:nth-child(7) {
-                color: #CD6799;
-            }
-
-            &:hover:nth-child(8) {
-                color: #06b6d4;
-            }
-
-        }
-    }
-
-   }
 }
 
 
@@ -239,26 +172,7 @@
         a:last-child {
             font-size: 24px;
         }
-    }
-
-    .skills-section {
-        width: 480px;
-
-        h2 {
-            font-size: 22px;
-        }
-        
-        ul {
-            font-size: 22px;
-
-            li {
-                font-size: 24px;
-            }
-        }
-    }
-
-    
-
+    }    
     
 }
 
@@ -276,35 +190,6 @@
 
         p {
             font-size: 16px;
-        }
-    }
-
-    .skills-section {
-        width: 320px;
-        display: flex;
-        flex-direction: column;
-
-        h2 {
-            font-size: 22px;
-            text-align: center;
-
-            &::after {
-                content: '';
-                margin-left: 0;
-            }
-        }
-        
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            padding: 2px 20px;
-            
-
-            li {
-                font-size: 30px;
-            }
         }
     }
 }

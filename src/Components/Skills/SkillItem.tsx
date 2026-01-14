@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useInView } from '../../Hooks/useInView';
 
 interface SkillItemProps {
   name: string;
@@ -9,32 +9,13 @@ interface SkillItemProps {
 }
 
 export const SkillItem = ({ name, level, color, icon: Icon, index }: SkillItemProps) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const skillRef = useRef<HTMLDivElement>(null);
+  
+  const { ref, isInView} = useInView({ threshold: 0.1 })
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => setIsVisible(true), index * 100);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (skillRef.current) {
-      observer.observe(skillRef.current);
-    }
-
-    return () => {
-      if (skillRef.current) {
-        observer.unobserve(skillRef.current);
-      }
-    };
-  }, [index]);
+  
 
   return (
-    <div ref={skillRef} className="skill-item">
+    <div ref={ref} className="skill-item" style={{ transitionDelay: `${index * 0.1}s`}}>
       <div className="skill-header">
         <div className="skill-info">
           <div className="skill-icon" style={{ color }}>
@@ -47,9 +28,9 @@ export const SkillItem = ({ name, level, color, icon: Icon, index }: SkillItemPr
       
       <div className="progress-bar-container">
         <div 
-          className={`progress-bar ${isVisible ? 'animate' : ''}`}
+          className={`progress-bar ${isInView ? 'animate' : ''}`}
           style={{ 
-            width: isVisible ? `${level}%` : '0%',
+            width: isInView ? `${level}%` : '0%',
             backgroundColor: color
           }}
         />
