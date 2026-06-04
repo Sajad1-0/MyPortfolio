@@ -1,13 +1,57 @@
-// colors for light mode
-$background-color: #f9f9f9;
-$text-color: #141618;
-// color for dark theme
-$dark-background-color: #1f2833;
-$dark-text-color: #ebe9e1;
+// Theme tokens (CSS variables for light/dark switching)
+:root {
+  --background-color: #f9f9f9;
+  --text-color: #141618;
+  --text-muted: #515151;
+  --dark-background-color: #1f2833;
+  --dark-text-color: #ebe9e1;
+  --hover-background-color: #bab2b5;
+  --hover-text-color: #2e9cca;
+  --button-color: #4285f4;
+  --border-color: #141618;
+  --card-shadow: rgba(20, 22, 24, 0.15);
+  --card-background: #f5ede0;
+  --icon-color: #141618;
+  --btn-bg: #2e9cca;
+  --btn-text: #141618;
+  --btn-bg-hover: #1f2833;
+  --btn-text-hover: #66fcf1;
+  --btn-border: #2e9cca;
+}
 
-// hover colors 
-$hover-background-color:#bab2b5;
-$hover-text-color: #2e9cca;
+html[data-theme='dark'] {
+  --background-color: #1f2833;
+  --text-color: #ebe9e1;
+  --text-muted: #a8b2b8;
+  --dark-background-color: #0b0c10;
+  --dark-text-color: #c5c6c7;
+  --hover-background-color: #45a29e;
+  --hover-text-color: #66fcf1;
+  --border-color: #c5c6c7;
+  --card-shadow: rgba(102, 252, 241, 0.12);
+  --card-background: #2a3544;
+  --icon-color: #d1d5db;
+  --btn-bg: #15202b;
+  --btn-text: #ebe9e1;
+  --btn-bg-hover: #1e3a4f;
+  --btn-text-hover: #0e9188;
+  --btn-border: #45a29e;
+}
 
-// button colors
-$button-color: #4285f4;
+$background-color: var(--background-color);
+$text-color: var(--text-color);
+$text-muted: var(--text-muted);
+$dark-background-color: var(--dark-background-color);
+$dark-text-color: var(--dark-text-color);
+$hover-background-color: var(--hover-background-color);
+$hover-text-color: var(--hover-text-color);
+$button-color: var(--button-color);
+$border-color: var(--border-color);
+$card-shadow: var(--card-shadow);
+$card-background: var(--card-background);
+$icon-color: var(--icon-color);
+$btn-bg: var(--btn-bg);
+$btn-text: var(--btn-text);
+$btn-bg-hover: var(--btn-bg-hover);
+$btn-text-hover: var(--btn-text-hover);
+$btn-border: var(--btn-border);

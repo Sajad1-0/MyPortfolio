@@ -1,258 +1,201 @@
-@import "../../Styles/mixins.scss";
-@import "../../Styles/variables.scss";
+@import '../../Styles/mixins.scss';
+@import '../../Styles/variables.scss';
+@import '../../Styles/buttons.scss';
+@import '../../Styles/tech-icons.scss';
 
 .work-experience {
-    height: 100%;
-    position: relative;
-    margin: 100px auto;
+  height: 100%;
+  position: relative;
+  margin: 100px auto;
+  color: $text-color;
 
-    h1 {
-        font-family: 'Inter', sans-serif;
-        font-weight: 700;
-        font-size: 40px;
-        text-align: center;
-        letter-spacing: 20px;
-        text-transform: uppercase;
-    }
+  h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    color: $text-color;
+  }
 }
 
 .work-card {
-    @include Profile;
-    width: 80%;
-    margin: 25px auto;
-    padding: 20px 20px;
-    background: rgb(245, 237, 224);
-    border: 1px solid transparent;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+  @include Profile;
+  width: 80%;
+  margin: 25px auto;
+  padding: 20px;
+  background: $card-background;
+  color: $text-color;
+  border: 1px solid $border-color;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px $card-shadow;
+  align-items: flex-start;
 }
 
 .work-card-left {
-    img {
-        width: 300px;
-        height: 300px;
-    }
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+  }
 }
 
-
-
 .work-card-right {
-    flex: 1;
-    min-width: 0;
-    h1 {
-        font-family: 'Inter', sans-serif;
-        font-weight: 700;
-        font-size: 30px;
-        letter-spacing: 5px;
-        margin: 0;
-        text-align: start;
-    }
-    h2 {
-        font-family: 'Inter', sans-serif;
-        color:rgb(53, 53, 52);
-        font-weight: 500;
-        font-size: 25px;
-        margin: 0;
-        text-align: start;
-    }
-    h4 {
-        font-family: 'Inter', sans-serif;
-        color:rgb(81, 81, 81);
-        font-weight: 400;
-        font-size: 15px;
-        text-align: start;
-        margin: 0;
-    }
+  flex: 1;
+  min-width: 0;
+  color: $text-color;
 
-    p {
-        width: 80%;
-        font-family: 'Inter', sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.2;
-        margin: 0;
-    }
-    .description {
-        // Clamp to 2 lines when collapsed
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        line-height: 1.8;
-        margin: 1rem 0;
-        white-space: pre-line; // Preserves line breaks from your data
-        max-height: 3.8em; // 2 lines × 1.5 line-height = 3em
-        transition: max-height 0.8s ease-in-out;
-        
-        // When expanded, show all lines
-        &.expanded {
-            -webkit-line-clamp: unset;
-            max-height: 1000px; // Arbitrary large value to allow full expansion
-            transition: 0.8s ease-in;
-        }
-    }
-    
-    .expand-button {
-        font-family: 'Inter', sans-serif;
-        background-color: $hover-text-color;
-        color: $text-color;
-        border: 2px solid transparent;
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: 1.5rem;
-        display: flex;
-        align-items: center;
-        gap: 0.25rem;
-        
-        
-        &:hover {
-            text-decoration: underline;
-            background: #fff;
-            color: #000;
-        }
-    }
+  h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 0 0 8px;
+    text-align: left;
+    color: $text-color;
+  }
 
+  h2 {
+    font-family: 'Inter', sans-serif;
+    color: $text-muted;
+    font-weight: 500;
+    font-size: 25px;
+    margin: 0 0 8px;
+    text-align: left;
+  }
+
+  h4 {
+    font-family: 'Inter', sans-serif;
+    color: $text-muted;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+    margin: 0 0 12px;
+  }
+
+  p {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    color: $text-color;
+    text-align: left;
+  }
+
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.8;
+    margin: 1rem 0;
+    white-space: pre-line;
+    max-height: 3.8em;
+    transition: max-height 0.8s ease-in-out;
+    color: $text-color;
+
+    &.expanded {
+      -webkit-line-clamp: unset;
+      max-height: 1000px;
+      transition: 0.8s ease-in;
+    }
+  }
+
+  .expand-button {
+    @include portfolio-button;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 8px 14px;
+  }
 }
 
 .work-experience .tech {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 12px;
+  @include tech-icon-list;
+
+  h2 {
+    font-size: 20px;
+    color: $text-color;
+    margin-right: 12px;
+    margin-top: 6px;
+  }
+
+  ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    h2 {
-        font-size: 20px;
-    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      color: $text-color;
+      cursor: default;
 
-    ul {
-        display: flex;
-        gap: 30px;
-        list-style: none;
-        
-        li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 16px; 
-            font-weight: 500;
-            cursor: default; 
-            
-            .tech-icon {
-                font-size: 30px; 
-                transition: all 0.3s;
-                cursor: pointer;
-                display: inline-flex;
-                
-                &:hover {
-                    transform: scale(1.1) translateY(-5px);
-                }
-                
-                &.tech-react:hover { color: #61dafb; }
-                &.tech-nextjs:hover { color: #000; }
-                &.tech-reactnative:hover { color: #61dafb; }
-                &.tech-javascript:hover { color: #f7df1e; }
-                &.tech-tailwind:hover { color: #06b6d4; }
-                &.tech-typescript:hover { color: #3178c6; }
-                &.tech-java:hover { color: #007396; }
-                &.tech-springboot:hover { color: #6db33f; }
-                &.tech-drizzle:hover { color: #C5F74F; }
-                &.tech-nodejs:hover { color: #339933; }
-                &.tech-docker:hover { color: #2496ed; }
-                &.tech-mysql:hover { color: #4479a1; }
-                &.tech-sass:hover { color: #cc6699; }
-                &.tech-express:hover { color: #68a063; }
-                &.tech-maven:hover { color: #C71A36; }
-                &.tech-postgresql:hover { color: #4169E1; }
-                &.tech-python:hover { color: #3776ab; }
-                &.tech-fastapi:hover { color: #009688; }
-                &.tech-monorepo:hover { color: #764abc; }
-                &.tech-github:hover { color: #181717; }
-                &.tech-git:hover { color: #F05032; }
-            }
+      .tech-icon {
+        font-size: 30px;
+        transition:
+          color 0.3s ease,
+          transform 0.3s ease;
+        cursor: pointer;
+        display: inline-flex;
+        color: $icon-color;
+
+        &:hover {
+          transform: scale(1.1) translateY(-5px);
         }
+      }
     }
+  }
 }
 
-
-// Responsive design for tablets devices
 @media only screen and (max-width: 1280px) {
-    .work-experience {
-        h1 {
-            font-size: 30px;
-            letter-spacing: 10px;
-        }
+  .work-experience h1 {
+    font-size: 30px;
+    letter-spacing: 10px;
+  }
+
+  .work-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-card-left img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .work-card-right {
+    h1,
+    h2,
+    h4,
+    p {
+      text-align: center;
     }
 
-    .work-card {
-        flex-direction: column;
-
-        .work-card-left {
-            img {
-                width: 250px;
-                height: 250px;
-            }
-        }
-
-        .work-card-right {
-            h1 {
-                font-size: 25px;
-                text-align: center;
-                
-            }
-            h2 {
-                font-size: 20px;
-                text-align: center;
-            }
-            h4 {
-                font-size: 14px;
-                text-align: center;
-            }
-            p {
-                font-size: 15px;
-                margin: auto;
-                text-align: center;
-            }
-
-            .expand-button {
-                margin: auto;
-            }
-        }
+    .expand-button {
+      margin: auto;
     }
+  }
 
-    .work-experience .tech {
-        flex-direction: column;
-        margin-top: 10px;
-
-        ul {
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            padding: 0;
-            
-            .tech-icon {
-                &.tech-react { color: #61dafb; }
-                &.tech-nextjs { color: #000; }
-                &.tech-reactnative { color: #61dafb; }
-                &.tech-javascript { color: #f7df1e; }
-                &.tech-tailwind { color: #06b6d4; }
-                &.tech-typescript { color: #3178c6; }
-                &.tech-java { color: #007396; }
-                &.tech-springboot { color: #6db33f; }
-                &.tech-drizzle { color: #C5F74F; }
-                &.tech-nodejs { color: #339933; }
-                &.tech-docker { color: #2496ed; }
-                &.tech-mysql { color: #4479a1; }
-                &.tech-sass { color: #cc6699; }
-                &.tech-express { color: #68a063; }
-                &.tech-maven { color: #C71A36; }
-                &.tech-postgresql { color: #4169E1; }
-                &.tech-python { color: #3776ab; }
-                &.tech-fastapi { color: #009688; }
-                &.tech-monorepo { color: #764abc; }
-                &.tech-github { color: #181717; }
-                &.tech-git { color: #F05032; }
-            }
-        }
-    }
+  .work-experience .tech {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }

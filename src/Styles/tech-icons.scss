@@ -1,0 +1,44 @@
+@import "./variables.scss";
+
+// Brand colors for each tech icon. Names map to the `name` field on
+// constants in `src/data/constants.ts` (e.g. TECH_REACT.name === 'react').
+$tech-colors: (
+    'html':         #e34f26,
+    'css':          #1572b6,
+    'react':        #61dafb,
+    'reactnative':  #61dafb,
+    'javascript':   #f7df1e,
+    'typescript':   #3178c6,
+    'tailwind':     #06b6d4,
+    'sass':         #cc6699,
+    'java':         #007396,
+    'springboot':   #6db33f,
+    'maven':        #c71a36,
+    'mysql':        #4479a1,
+    'nodejs':       #339933,
+    'docker':       #2496ed,
+    'drizzle':      #c5f74f,
+    'express':      #444444,
+    'postgresql':   #336791,
+    'python':       #3776ab,
+    'next.js':      #000000,
+    'fastapi':      #009688,
+    'git':          #f05032,
+    'github':       #181717,
+    'Monorepo':     #6f42c1,
+    'jest':         #c21325,
+    'swagger':      #85ea2d,
+    'postman':      #ef5b25,
+    'mongodb':      #47a248,
+    'prisma':       #2d3748,
+    'supabase':     #3ecf8e,
+    'liveDemo':     #2ecc71,
+);
+
+@mixin tech-icon-list {
+    @each $name, $color in $tech-colors {
+        .tech-#{$name}:hover {
+            color: $color;
+        }
+    }
+}

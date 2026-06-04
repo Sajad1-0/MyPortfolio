@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { RiMenuLine } from "react-icons/ri";
 import { RiMenuFoldLine } from "react-icons/ri";
 import { useNavigate} from 'react-router-dom';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import './MobileNav.scss';
 
 interface Menu {
@@ -47,7 +48,8 @@ const MenuLinks: Menu[] = [
         <div className='mobile-nav'>
             {/* Button for toggleMenu */}
             <div className='mobileButton-section'>
-                <button onClick={toggleMenu}>
+                <ThemeToggle />
+                <button type="button" onClick={toggleMenu} aria-label={isOpen ? 'Close menu' : 'Open menu'}>
                     {isOpen ? <RiMenuFoldLine className='open'/> : <RiMenuLine/> }
                 </button>
             </div>

@@ -1,155 +1,161 @@
-@import "../../Styles/mixins.scss";
-@import "../../Styles/variables.scss";
+@import '../../Styles/mixins.scss';
+@import '../../Styles/variables.scss';
 
 .about-section {
-    @include Profile; // the same placement as the profile section
-    width: 80%;
-    margin:auto;
-    will-change: transform;
+  @include Profile; // the same placement as the profile section
+  width: 80%;
+  margin: auto;
+  will-change: transform;
 }
 
 .left-about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 80px;
-    padding:80px 40px;
-    margin: auto;
-    border-right: 1px solid #000; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  padding: 80px 40px;
+  margin: auto;
+  border-right: 1px solid $border-color;
 
-    h1 {
-        font-family: 'Inter', sans-serif;
-        font-size: 40px;
-        color: $text-color;
-        will-change: transform, opacity;
-        animation: none;  // ✅ Default: no animation
+  h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    color: $text-color;
+    will-change: transform, opacity;
+    animation: none; // ✅ Default: no animation
+  }
+
+  // ✅ Only animate when 'animate' class is added
+  &.animate h1 {
+    animation: letters 6s ease-in-out infinite alternate;
+
+    &:nth-child(2) {
+      animation-delay: 1s;
     }
-
-    // ✅ Only animate when 'animate' class is added
-    &.animate h1 {
-        animation: letters 6s ease-in-out infinite alternate;
-
-        &:nth-child(2) { animation-delay: 1s; }
-        &:nth-child(3) { animation-delay: 2s; }
-        &:nth-child(4) { animation-delay: 3s; }
-        &:nth-child(5) { animation-delay: 4s; }
+    &:nth-child(3) {
+      animation-delay: 2s;
     }
-
-    @keyframes letters {
-        0% {
-            transform: translate3d(0, 0, 0);
-            opacity: 1;
-        }
-        50% {
-            color: $hover-text-color;
-            transform: translate3d(-10px, 0, 0);
-            opacity: 0.7;
-        }
-        100% {
-            transform: translate3d(0, 0, 0);
-            opacity: 0;
-        }
+    &:nth-child(4) {
+      animation-delay: 3s;
     }
+    &:nth-child(5) {
+      animation-delay: 4s;
+    }
+  }
+
+  @keyframes letters {
+    0% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+    50% {
+      color: $hover-text-color;
+      transform: translate3d(-10px, 0, 0);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 0;
+    }
+  }
 }
 
 // right section
 .right-about {
-    h1 {
-        font-family: 'Inter', sans-serif;
-        font-weight: 700;
-        text-align: center;
-        line-height: 1.8;
-    }
+  h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.8;
+  }
 
-    h2 {
-        font-family: 'Inter', sans-serif;
-        font-size: 24px;
-        font-weight: 500;
-    }
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+  }
 
-    p {
-        font-family: 'Inter', sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 2;
-        white-space: pre-line;
-    }
+  p {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 2;
+    white-space: pre-line;
+  }
 }
 
 // Responsive design for About section
 
 @media only screen and (max-width: 1280px) {
-    .about-section {
-        flex-wrap: wrap;
-        transition: all 0.5s ease-in-out;
-    }
+  .about-section {
+    flex-wrap: wrap;
+    transition: all 0.5s ease-in-out;
+  }
 
-    .left-about {
-        flex-direction: row;
-        border-bottom: 1px solid #000;
-        border-right: none;
-        padding: 10px 50px;
-        gap: 20px;
-        
+  .left-about {
+    flex-direction: row;
+    border-bottom: 1px solid $border-color;
+    border-right: none;
+    padding: 10px 50px;
+    gap: 20px;
 
-        h1 {
-            letter-spacing: 35px;
-            animation: none;
-        }
-    
+    h1 {
+      letter-spacing: 35px;
+      animation: none;
     }
+  }
 }
 
 // responsive for smaller devices
 @media only screen and (max-width: 768px) {
-    .about-section {
-        width: 100%;
+  .about-section {
+    width: 100%;
+  }
+
+  .left-about {
+    h1 {
+      font-size: 30px;
+      letter-spacing: 10px;
+    }
+  }
+
+  // right section
+  .right-about {
+    h1 {
+      font-size: 20px;
     }
 
-    .left-about {
-        h1 {
-            font-size: 30px;
-            letter-spacing: 10px;
-        }
+    h2 {
+      font-size: 18px;
+      text-align: center;
     }
 
-    // right section
-    .right-about {
-        h1 {
-            font-size: 20px;
-        }
-
-         h2 {
-            font-size: 18px;
-            text-align: center;
-        }
-
-        p {
-            font-size: 15px;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+    p {
+      font-size: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
+  }
 }
 
 // responsive for mobile devices
 @media only screen and (max-width: 430px) {
-    .left-about {
-        display: flex;
-        justify-content: center;
-        padding: 10px 5rem;
+  .left-about {
+    display: flex;
+    justify-content: center;
+    padding: 10px 5rem;
+  }
+
+  .right-about {
+    h1 {
+      font-size: 15px;
+      padding: 10px 10px;
     }
 
-    .right-about {
-        h1 {
-            font-size: 15px;
-            padding: 10px 10px;
-        }
-
-        p {
-            font-size: 13px;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
+    p {
+      font-size: 13px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
+  }
 }

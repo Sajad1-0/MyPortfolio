@@ -1,5 +1,6 @@
 @import "../../Styles/mixins.scss";
 @import "../../Styles/variables.scss";
+@import "../../Styles/buttons.scss";
 
 .contact-section {
     height: 100%;
@@ -16,8 +17,19 @@
         text-transform: uppercase;
     }
 
-    p {
+    &__feedback {
         text-align: center;
+        font-weight: 600;
+        margin: 0 auto 12px;
+        max-width: 90%;
+
+        &--success {
+            color: #1b7f3a;
+        }
+
+        &--error {
+            color: #c0392b;
+        }
     }
 }
 
@@ -54,7 +66,7 @@
             }
            
             a {
-                color: #000;
+                color: $text-color;
                 transition: all 0.3s;
 
                 &:hover {
@@ -122,22 +134,11 @@ form {
     }
 
     .submit {
+        @include portfolio-button;
         width: 110px;
-        background-color: $hover-text-color;
-        color: $text-color;
-        border: 2px solid transparent;
-        border-radius: 10px;
-        outline: none;
-        padding: 10px 10px;
+        padding: 10px;
         font-size: 15px;
-        font-weight: 700;
         margin-top: 20px;
-        cursor: pointer;
-
-        &:hover {
-            box-shadow: 0 0 10px $text-color;
-            transition: all 0.5s;
-        }
     }
 }
 
@@ -149,7 +150,7 @@ form {
         font-size: 30px;
         letter-spacing: 10px;
         margin: auto;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid $border-color;
     }
    }
    

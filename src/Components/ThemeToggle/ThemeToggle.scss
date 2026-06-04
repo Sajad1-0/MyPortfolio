@@ -1,0 +1,45 @@
+@import "../../Styles/variables.scss";
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $btn-border;
+    background-color: $btn-bg;
+    color: $btn-text;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease,
+                border-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: $btn-bg-hover;
+        color: $btn-text-hover;
+        transform: scale(1.08);
+    }
+
+    &:focus-visible {
+        outline: 2px solid $hover-text-color;
+        outline-offset: 2px;
+    }
+
+    &__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        line-height: 1;
+        transition: transform 0.35s ease;
+
+        &.is-dark {
+            transform: rotate(0deg);
+        }
+
+        &.is-light {
+            transform: rotate(0deg);
+        }
+    }
+}

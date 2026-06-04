@@ -1,24 +1,35 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export const useInView = (options?: IntersectionObserverInit) => {
+interface UseInViewOptions {
+    threshold?: number;
+    rootMargin?: string;
+    root?: Element | Document | null;
+}
+
+export const useInView = ({
+    threshold = 0.1,
+    rootMargin,
+    root = null,
+}: UseInViewOptions = {}) => {
     const [isInView, setIsInView] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
-    
+
     useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => setIsInView(true));
-            }
-        }, {threshold: 0.1, ...options})
+        const node = ref.current;
+        if (!node) return;
 
-        if (ref.current) observer.observe(ref.current);
-        
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsInView(true);
+                }
+            },
+            { threshold, rootMargin, root }
+        );
 
-        return () => {
-            if (ref.current) observer.unobserve(ref.current)
-        }
-    }, []);
+        observer.observe(node);
+        return () => observer.unobserve(node);
+    }, [threshold, rootMargin, root]);
 
-    return { ref, isInView }
-
+    return { ref, isInView };
 };

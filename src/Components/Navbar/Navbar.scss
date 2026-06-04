@@ -5,6 +5,7 @@
 .navbar {
     @include menubar;
     background-color: $background-color;
+    transition: background-color 0.35s ease;
 }
 
 // Styling left section
@@ -30,11 +31,16 @@
 
 // Styling right section
 .right-navbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
     
     ul {
         display: flex;
         gap: 15px;
         list-style-type: none;
+        margin: 0;
+        padding: 0;
 
             button {
                 background-color: transparent;

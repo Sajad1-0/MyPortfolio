@@ -2,21 +2,18 @@ import React from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home';
-
-
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <div>
+    <ThemeProvider>
       <BrowserRouter basename='/MyPortfolio'>
-      
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </BrowserRouter>
-    </div>
+    </ThemeProvider>
   );
 }
 

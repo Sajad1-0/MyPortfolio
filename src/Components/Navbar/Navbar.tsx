@@ -2,9 +2,7 @@ import React from 'react'
 import './Navbar.scss';
 import { useNavigate } from 'react-router-dom';
 import MobileNavigation from '../MobileNavbar/MobileNav';
-
-
-/* Adding Navigation links */
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 interface Navigation {
     name: string;
@@ -18,43 +16,37 @@ const MenuLinks: Navigation[] = [
     {name: 'Contact', href: '#contact'}
 ]
 
-
 const Navbar: React.FC = () => {
 
     const navigate = useNavigate();
-    // navigate to chosen section of the page
+
     const handleNavigate = (href: string) => {
         if (href.startsWith('#')) {
-            // scroll to selected section
-            const elementId = href.substring(1); // remove the #
+            const elementId = href.substring(1);
             const element = document.getElementById(elementId);
             if (element) {
                 element.scrollIntoView({behavior: 'smooth'});
             }
         } else {
-            // navigate to hyper link
             navigate(href);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
 
   return (
     <div className='navbar'>
-        {/* Right section of Menubar */}
         <div className='left-navbar'>
-            {/* Hamburger Menu for mobile devices */}
             <MobileNavigation/>
-            {/* Website's logo */}
             <div className='logo'>
-            <button onClick={() => handleNavigate('/')}>Sajjad.dev</button>
+            <button type="button" onClick={() => handleNavigate('/')}>Sajjad.dev</button>
             </div>
         </div>
-        {/* Left section of Menubar */}
         <div className='right-navbar'>
-            {/* Navigation links */}
+            <ThemeToggle />
             <ul>
             {MenuLinks.map((data, index)=> (
                 <li key={index}>
-                <button onClick={() => handleNavigate(data.href)}
+                <button type="button" onClick={() => handleNavigate(data.href)}
                 className='nav-item' >
                     {data.name}
                 </button>

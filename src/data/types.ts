@@ -3,10 +3,13 @@ export interface TechConfig {
     name: string;
 }
 
+export type ProjectCategory = 'frontend' | 'backend' | 'fullstack';
+
 export interface Projects {
     id: number;
     title: string;
     description: string;
+    category: ProjectCategory;
     liveDemo?: string;
     githubLink: string;
     image: string;
