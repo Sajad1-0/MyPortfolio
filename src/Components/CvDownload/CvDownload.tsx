@@ -32,7 +32,7 @@ const CvDownload = () => {
           key={option.id}
           type="button"
           className="cv-download__btn"
-          onClick={() => downloadPublicFile(option.fileName, option.downloadName)}
+          onClick={() => void downloadPublicFile(option.fileName, option.downloadName)}
         >
           <FiDownload aria-hidden="true" />
           <span>{option.label}</span>
