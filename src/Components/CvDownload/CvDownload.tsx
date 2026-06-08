@@ -13,7 +13,7 @@ const CV_OPTIONS: CvOption[] = [
   {
     id: 'en',
     label: 'Download CV (English)',
-    fileName: 'SajjadCV_En.pdf',
+    fileName: 'SajjadCV-En.pdf',
     downloadName: 'Sajjad-Ghaderi-CV-English.pdf',
   },
   {
