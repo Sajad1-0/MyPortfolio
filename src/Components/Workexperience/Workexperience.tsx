@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { WorkExperiences } from '../../data/workExperience';
+import { WorkExperience } from '../../data/types';
 import './Workexperience.scss';
 import { MdExpandMore, MdExpandLess } from 'react-icons/md';
 
@@ -14,7 +15,12 @@ export const Workexperience = () => {
 
     const formData = (data: Date | undefined): string => {
         if (!data) return 'Present';
-        return data.toLocaleDateString('en-US', {year: 'numeric', month: 'short'}) 
+        return data.toLocaleDateString('en-US', {year: 'numeric', month: 'short'})
+    }
+
+    const formatDateLine = (work: WorkExperience): string => {
+        const range = work.dateLabel ?? `${formData(work.startTime)} - ${formData(work.endTime)}`;
+        return work.location ? `${range} · ${work.location}` : range;
     }
 
     return (
@@ -26,13 +32,15 @@ export const Workexperience = () => {
                     const isExpanded = expandedId === work.id;
                     return (
                         <div key={work.id} className='work-card'>
-                            <div className='work-card-left'>
-                                <img src={work.image} alt={work.title} loading='lazy'/>
-                            </div>
+                            {work.image && (
+                                <div className='work-card-left'>
+                                    <img src={work.image} alt={work.title} loading='lazy' />
+                                </div>
+                            )}
                             <div className='work-card-right'>
                                 <h1>{work.title}</h1>
                                 <h2>{work.role}</h2>
-                                <h4>{formData(work.startTime)} - {formData(work.endTime)}</h4>
+                                <h4>{formatDateLine(work)}</h4>
 
                                 {/** Description with expand/collapse */}
                                 <p className={isExpanded ? 'description expanded' : 'description'}>

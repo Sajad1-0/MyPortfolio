@@ -28,6 +28,8 @@ export interface WorkExperience {
     title: string;
     role?: string;
     description?: string;
+    location?: string;
+    dateLabel?: string;
     tech?: {
         frontend?: TechConfig[],
         backend?: TechConfig[],

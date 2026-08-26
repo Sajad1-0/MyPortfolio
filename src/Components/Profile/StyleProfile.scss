@@ -1,6 +1,6 @@
-@import '../../Styles/mixins.scss';
-@import '../../Styles/variables.scss';
-@import '../../Styles/buttons.scss';
+@use '../../Styles/mixins.scss' as *;
+@use '../../Styles/variables.scss' as *;
+@use '../../Styles/buttons.scss' as *;
 // font family for headings
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Pacifico&display=swap');
 // font family for paragraph
@@ -20,10 +20,13 @@
   align-items: center;
   margin: auto;
   padding: 30px;
+  flex-shrink: 0;
 
   img {
     width: 400px;
-    height: 550px;
+    height: 480px;
+    object-fit: cover;
+    object-position: center 18%;
     border: 2px solid $hover-text-color;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     box-shadow: 0 0 35px $hover-text-color;
@@ -131,9 +134,11 @@
     background-color: transparent;
 
     img {
-      width: 300px;
-      height: 400px;
-      transition: all 0.5 ease-in-out; // making decreasing of image width smooth
+      width: 280px;
+      height: 340px;
+      object-fit: cover;
+      object-position: center 18%;
+      transition: all 0.5s ease-in-out;
     }
   }
 

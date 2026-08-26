@@ -63,19 +63,18 @@ export const TECH_SUPABASE = { icon: SiSupabase, name: 'supabase' };
 export const UserData = {
   name: 'Sajjad Ghaderi',
   title: 'Full‑Stack Developer Specializing in Next.js, Node.js & TypeScript',
-  bio: `Hi, I'm Sajjad — a full‑stack developer specializing in Next.js, Node.js, and TypeScript. I build fast, scalable, and user‑focused applications across web and mobile. My experience spans everything from dynamic booking systems that reduce user steps from 6 to 2, to fullstack platforms built with modern frameworks and clean architecture principles. I enjoy turning complex flows into intuitive interfaces and developing backend systems that are secure, efficient, and production‑ready.`,
-  bio2: `I'm driven by craftsmanship, problem‑solving, and creating products that feel great to use — whether it's a fullstack SaaS tool, a mobile app, or a backend service powering real‑world features.`,
+  bio: `Full‑stack developer focused on building scalable systems and intuitive interfaces using Next.js, Node.js and TypeScript. I turn complex flows into clean, high‑performance products — from multilingual platforms to optimized booking systems.`,
 };
 
 export const AboutMeData = {
-  subTitle: `What makes me unique:`,
-  description1: `Full‑stack developer specializing in Next.js, Node.js, and TypeScript — with hands‑on experience building scalable systems and user‑centric interfaces. My background spans both government-level development at Skolverket and high‑velocity product work at Fixmeapp, giving me a rare blend of enterprise structure and startup agility.`,
-  description2: `• Adaptive UI Engineering: Created dynamic, real‑time UI flows that reduced a complex booking process from 6 steps to 2
-• Full‑Stack Expertise: Strong in modern frontend (React/Next.js/TypeScript) and backend (Node.js, Express, Java)
-• Product Mindset: Experience owning core flows in monorepo environments across web and mobile`,
-  description3: `I thrive in collaborative environments where ideas move quickly and teams work together to build meaningful products. I value clean architecture, clear communication, and a mindset of continuous improvement — always aiming to deliver solutions that are both elegant and practical.`,
-  subTitle2: `Beyond Coding:`,
-  lastDescription: `🥊 Boxing & Strength Training sharpen my discipline, focus, and resilience — qualities I bring into every project.
-🥾 Hiking & Reading help me reset, gain perspective, and often spark creative solutions to technical challenges.
-I’m currently seeking frontend, backend or full‑stack roles where I can contribute to impactful digital products and continue growing as a developer.`,
+  title: 'Full‑stack developer & CTO, based in Stockholm, Sweden 📍',
+  description1: `I build products end to end — from cloud‑ready APIs and clean architecture to interfaces that feel simple under the hood. My stack is Next.js, Node.js and TypeScript, but the real work is turning messy, real‑world flows into systems that are fast, secure and easy to use.`,
+  subTitle: `How I work`,
+  description2: `At Yemaya Labs I lead technical direction as CTO, owning architecture, stack decisions and delivery of Sense — multilingual platforms for data collection and early narrative‑shift detection. That means GDPR‑aware workflows, CI/CD, and translating business needs into something that actually ships.
+
+Before that, at Fixmeapp I cut a booking journey from 6 steps to 2 with a real‑time adaptive UI, and built the FastAPI backend that had to keep up. At Skolverket I shipped accessible React/TypeScript features on a national education platform used by thousands of students — government constraints, WCAG, and production quality included.
+
+The through‑line is the same: reduce friction, keep the architecture honest, and ship work that holds up in production.`,
+  subTitle2: `Beyond the code`,
+  lastDescription: `Boxing and strength training keep me disciplined. Hiking and reading give me space to think — which is often where the better technical decisions come from. I’m motivated by craftsmanship, clear communication, and products that people actually enjoy using.`,
 };

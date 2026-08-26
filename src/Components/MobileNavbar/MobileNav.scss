@@ -1,5 +1,5 @@
-@import "../../Styles/mixins.scss";
-@import "../../Styles/variables.scss";
+@use "../../Styles/mixins.scss" as *;
+@use "../../Styles/variables.scss" as *;
 
 .mobile-nav {
     display: none;

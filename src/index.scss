@@ -1,4 +1,4 @@
-@import "./Styles/variables.scss";
+@use "./Styles/variables.scss" as *;
 
 html {
   color-scheme: light;

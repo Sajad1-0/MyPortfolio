@@ -1,7 +1,7 @@
 import React from 'react';
 import './StyleProfile.scss';
 import { UserData } from '../../data/constants';
-import profilePhoto from '../../Assests/Me.png';
+import profilePhoto from '../../Assests/Profile-linkedin-photo.png';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import CvDownload from '../CvDownload/CvDownload';
@@ -20,7 +20,6 @@ export const MyProfile: React.FC = () => {
       <div className="right">
         <h1>{UserData.title}</h1>
         <p>{UserData.bio}</p>
-        <p>{UserData.bio2}</p>
         <CvDownload />
         <div className="social-links">
           <button type="button" onClick={handleContact}>

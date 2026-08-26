@@ -1,4 +1,4 @@
-@import "../../Styles/variables.scss";
+@use "../../Styles/variables.scss" as *;
 
 .theme-toggle {
     width: 40px;

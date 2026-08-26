@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@use "./variables.scss" as *;
 
 // Brand colors for each tech icon. Names map to the `name` field on
 // constants in `src/data/constants.ts` (e.g. TECH_REACT.name === 'react').

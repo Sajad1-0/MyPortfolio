@@ -16,14 +16,10 @@ const About = () => {
         <h1>T</h1>
       </div>
       <div className='right-about'>
-        <h1>
-        Crafting Complete Digital Solutions: Full Stack Developer
-        Based in Stockholm, Sweden 📍 
-        </h1>
+        <h1>{AboutMeData.title}</h1>
         <p>{AboutMeData.description1}</p>
         <h2>{AboutMeData.subTitle}</h2>
         <p>{AboutMeData.description2}</p>
-        <p>{AboutMeData.description3}</p>
         <h2>{AboutMeData.subTitle2}</h2>
         <p>{AboutMeData.lastDescription}</p>
       </div>

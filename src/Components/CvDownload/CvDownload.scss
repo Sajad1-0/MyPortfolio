@@ -1,5 +1,5 @@
-@import "../../Styles/variables.scss";
-@import "../../Styles/buttons.scss";
+@use "../../Styles/variables.scss" as *;
+@use "../../Styles/buttons.scss" as *;
 
 .cv-download {
     display: flex;

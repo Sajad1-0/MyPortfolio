@@ -22,8 +22,6 @@ import {
   TECH_NEXTJS,
   TECH_REACTNATIVE,
   TECH_MONGODB,
-  TECH_PRISMA,
-  TECH_SUPABASE,
 } from './constants';
 
 export const Project: Projects[] = [
@@ -47,7 +45,13 @@ Key Features:
     id: 2,
     title: 'Movie App',
     category: 'frontend',
-    description: `A React Native mobile app for discovering and browsing movies. Built with TypeScript for type-safe components, smooth navigation, and a polished mobile-first experience.`,
+    description: `A React Native mobile app for discovering and browsing movies. Built with TypeScript for type-safe screens, smooth navigation, and a polished mobile-first experience around search, details, and saved titles.
+
+Key Features:
+- Movie discovery with search and category browsing
+- Dedicated detail views with ratings, overview, and metadata
+- Type-safe components and navigation in TypeScript
+- Mobile-first UI with smooth, native-feeling interactions`,
     image: movieApp,
     githubLink: 'https://github.com/Sajad1-0/movie-app-react-native',
     technologies: [TECH_REACTNATIVE, TECH_TYPESCRIPT],
@@ -71,7 +75,13 @@ Core Functionality:
     id: 4,
     title: 'Spotly',
     category: 'backend',
-    description: `A production-ready RESTful API for managing workspace and conference room bookings. Built with Node.js and TypeScript, featuring JWT authentication, room availability checking, and booking conflict prevention. Containerized with Docker for easy deployment and scalability.`,
+    description: `A production-ready REST API for workspace and conference room bookings. Built with Node.js and TypeScript using Clean Architecture, JWT authentication, availability checks, and Dockerized deployment for a stable production setup.
+
+Core Functionality:
+- JWT authentication and protected booking endpoints
+- Room availability checks with booking conflict prevention
+- Full CRUD for rooms, users, and reservations
+- PostgreSQL persistence with Drizzle ORM and Docker deployment`,
     image: spotly,
     githubLink: 'https://github.com/Sajad1-0/Spotly',
     technologies: [
@@ -87,7 +97,13 @@ Core Functionality:
     id: 5,
     title: 'Subscription Tracker',
     category: 'backend',
-    description: `A Node.js backend API for tracking recurring subscriptions. Handles CRUD operations, validation, and persistence with a clean REST API design suitable for production dashboards and automation.`,
+    description: `A Node.js backend for tracking recurring subscriptions, costs, and reminders. Designed as a clean REST API with validation and MongoDB persistence — ready to power dashboards, notifications, and automation.
+
+Core Functionality:
+- CRUD for subscriptions, billing cycles, and upcoming renewals
+- Input validation and structured error handling
+- MongoDB persistence with a maintainable Express architecture
+- API design suited for production dashboards and reminder workflows`,
     image: subscriptionTracker,
     githubLink: 'https://github.com/Sajad1-0/subscription-tracker-nodejs',
     technologies: [TECH_NODEJS, TECH_JAVASCRIPT, TECH_EXPRESS, TECH_MONGODB],
@@ -96,7 +112,13 @@ Core Functionality:
     id: 6,
     title: 'Job Application Tracker',
     category: 'fullstack',
-    description: `A fullstack Next.js application for tracking job applications end-to-end. Combines a modern React UI with server-side data handling, structured workflows, and a maintainable TypeScript codebase.`,
+    description: `A fullstack Next.js app for tracking job applications end to end — companies, statuses, and deadlines in one place. Combines a modern React UI with server-side data handling and a maintainable TypeScript codebase.
+
+Key Features:
+- Track applications with status, company, and deadline workflows
+- State-driven UI with robust CRUD across the full application lifecycle
+- Server-side data handling in Next.js with a typed TypeScript layer
+- Responsive Tailwind UI with a live production deployment`,
     image: jobApplicationTracker,
     githubLink: 'https://github.com/Sajad1-0/Job-application-tracker-nextjs',
     liveDemo: 'https://job-application-tracker-dusky-one.vercel.app/',
@@ -106,7 +128,13 @@ Core Functionality:
     id: 7,
     title: 'Dev Events',
     category: 'fullstack',
-    description: `A fullstack developer events platform built with Next.js 16. Showcases event discovery, registration flows, and a scalable architecture with modern React patterns and type-safe APIs.`,
+    description: `A fullstack developer events platform built with Next.js 16 — the hub for events you should not miss. Combines event discovery and registration with App Router patterns, server-side rendering, and a typed MongoDB data layer.
+
+Key Features:
+- Event discovery with advanced filtering and registration flows
+- App Router architecture with Server Actions, SSR, and ISR
+- Authentication and structured data modeling with MongoDB
+- Type-safe APIs and a scalable full-stack TypeScript codebase`,
     image: devEvents,
     githubLink: 'https://github.com/Sajad1-0/dev-events-nextjs16',
     technologies: [TECH_NEXTJS, TECH_TYPESCRIPT, TECH_TAILWIND, TECH_MONGODB],
