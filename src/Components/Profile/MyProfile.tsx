@@ -1,10 +1,11 @@
 import React from 'react';
 import './StyleProfile.scss';
 import { UserData } from '../../data/constants';
-import profilePhoto from '../../Assests/Profilbild.jpg';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import CvDownload from '../CvDownload/CvDownload';
+
+const profilePhoto = `${process.env.PUBLIC_URL}/sajjad-ghaderi-20260909.jpg`;
 
 export const MyProfile: React.FC = () => {
   const handleContact = () => {
