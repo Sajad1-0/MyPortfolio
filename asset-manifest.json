@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/MyPortfolio/static/css/main.78800d36.css",
-    "main.js": "/MyPortfolio/static/js/main.b81b7178.js",
+    "main.css": "/MyPortfolio/static/css/main.eaf645c6.css",
+    "main.js": "/MyPortfolio/static/js/main.4947222a.js",
     "static/js/453.1407b060.chunk.js": "/MyPortfolio/static/js/453.1407b060.chunk.js",
-    "static/media/Profile-linkedin-photo.png": "/MyPortfolio/static/media/Profile-linkedin-photo.f006fc5e5efbc15cd148.png",
     "static/media/Movie-app.png": "/MyPortfolio/static/media/Movie-app.f62f01f173ae45e5e3b7.png",
     "static/media/jersey-sweden.png": "/MyPortfolio/static/media/jersey-sweden.e2cc30c0daace90a3718.png",
     "static/media/subscription-app.png": "/MyPortfolio/static/media/subscription-app.4ad646acf29977004c94.png",
     "static/media/Spotly.png": "/MyPortfolio/static/media/Spotly.1a421ab0da5357c496e6.png",
+    "static/media/Profilbild.jpg": "/MyPortfolio/static/media/Profilbild.0bd28f8a6dc4c206dc9c.jpg",
     "static/media/event-app.png": "/MyPortfolio/static/media/event-app.7c0ba204838f6c34cb5b.png",
     "static/media/job-app-tracker.png": "/MyPortfolio/static/media/job-app-tracker.cc004e8e5d0ea7147e8b.png",
     "static/media/Skolverket.png": "/MyPortfolio/static/media/Skolverket.c785b15687392f1e7291.png",
     "static/media/Fixmeapp.jpg": "/MyPortfolio/static/media/Fixmeapp.295eee53feac6a10cf99.jpg",
     "index.html": "/MyPortfolio/index.html",
-    "main.78800d36.css.map": "/MyPortfolio/static/css/main.78800d36.css.map",
-    "main.b81b7178.js.map": "/MyPortfolio/static/js/main.b81b7178.js.map",
+    "main.eaf645c6.css.map": "/MyPortfolio/static/css/main.eaf645c6.css.map",
+    "main.4947222a.js.map": "/MyPortfolio/static/js/main.4947222a.js.map",
     "453.1407b060.chunk.js.map": "/MyPortfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.78800d36.css",
-    "static/js/main.b81b7178.js"
+    "static/css/main.eaf645c6.css",
+    "static/js/main.4947222a.js"
   ]
 }
