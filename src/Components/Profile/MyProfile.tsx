@@ -1,7 +1,7 @@
 import React from 'react';
 import './StyleProfile.scss';
 import { UserData } from '../../data/constants';
-import profilePhoto from '../../Assests/Profile-linkedin-photo.png';
+import profilePhoto from '../../Assests/Profilbild.jpg';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import CvDownload from '../CvDownload/CvDownload';
