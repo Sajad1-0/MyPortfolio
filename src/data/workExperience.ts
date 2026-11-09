@@ -24,9 +24,9 @@ export const WorkExperiences: WorkExperience[] = [
         id: 0,
         title: 'Yemaya Labs',
         role: 'Full‑Stack Developer & CTO',
-        dateLabel: '2026–',
+        dateLabel: '2026',
         location: 'Stockholm',
-        description: `CTO and full‑stack developer responsible for the full technical direction, architecture and delivery of Yemaya Labs’ core platforms (Sense & Signal).
+        description: `Owned technical direction, architecture and delivery of Yemaya Labs’ core platforms (Sense & Signal) as full‑stack developer and CTO.
 
 • Led the entire IT department, including architecture, tech‑stack decisions and platform operations.
 • Built and developed Sense & Signal — scalable systems for multilingual data collection and early narrative‑shift detection.

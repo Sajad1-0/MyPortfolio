@@ -1,98 +1,121 @@
 @use '../../Styles/mixins.scss' as *;
 @use '../../Styles/variables.scss' as *;
 @use '../../Styles/buttons.scss' as *;
-// font family for headings
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Pacifico&display=swap');
-// font family for paragraph
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .profile-content {
   @include Profile;
-  width: 80%;
-  margin: auto;
-  transition: all 0.5s ease-in-out;
-  will-change: transform; // optimazing the prefomence of the page
+  width: min(1100px, 90%);
+  margin: 40px auto 20px;
+  align-items: center;
 }
 
 .left {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  padding: 30px;
   flex-shrink: 0;
+  padding: 20px;
 
   img {
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
     object-position: center center;
-    border: 2px solid $hover-text-color;
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    box-shadow: 0 0 35px $hover-text-color;
-    animation: linemoves 8s ease-in-out infinite;
-    transition: all 0.5s ease-in-out;
-  }
-
-  /* border lines moves */
-  @keyframes linemoves {
-    0% {
-      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
-
-    50% {
-      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    }
-
-    100% {
-      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
+    border-radius: 28px;
+    border: 1px solid $border-color;
+    box-shadow: 0 18px 40px $card-shadow;
   }
 }
 
-// right section
 .right {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  max-width: 640px;
 
   h1 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 36px;
-    text-align: center;
+    font-size: 42px;
+    text-align: left;
+    margin: 0 0 4px;
+    letter-spacing: -0.5px;
   }
+}
 
-  p {
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
+.profile-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $hover-text-color;
+  margin: 0 0 8px;
+}
+
+.profile-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.profile-stack {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: $text-muted;
+  margin: 0 0 16px;
+}
+
+.profile-bio {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  text-align: left;
+  margin: 0 0 16px;
+}
+
+.profile-highlights {
+  margin: 0 0 8px;
+  padding-left: 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+
+  li {
+    margin-bottom: 6px;
   }
+}
+
+.right .cv-download {
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .social-links {
   display: flex;
+  align-items: center;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 12px;
 
   button {
     @include portfolio-button;
-    padding: 10px 15px;
+    padding: 10px 18px;
     font-size: 15px;
   }
 
   a {
     color: $icon-color;
     font-size: 28px;
-    padding-top: 8px;
+    padding-top: 4px;
     transition:
       color 0.3s ease,
       transform 0.3s ease;
 
     &:hover {
-      transform: scale(1.1) translateY(-5px);
+      transform: scale(1.08) translateY(-3px);
     }
 
     &:first-of-type:hover {
@@ -106,82 +129,65 @@
 
   a:last-child {
     font-size: 30px;
-    padding-top: 7px;
   }
 }
 
-// responsive design for profile section
 @media only screen and (max-width: 1280px) {
   .profile-content {
     flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    img {
-      transition: all 0.5s ease-in-out;
+  .right {
+    align-items: center;
+
+    h1 {
+      text-align: center;
     }
+
+    .cv-download {
+      justify-content: center;
+    }
+  }
+
+  .profile-bio,
+  .profile-highlights {
+    text-align: left;
   }
 }
 
-// for smaller devices
 @media only screen and (max-width: 768px) {
   .profile-content {
-    width: 100%;
-    flex-wrap: wrap;
+    width: 92%;
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 24px;
   }
 
-  .left {
-    background-color: transparent;
-
-    img {
-      width: 280px;
-      height: 280px;
-      object-fit: cover;
-      object-position: center center;
-      transition: all 0.5s ease-in-out;
-    }
+  .left img {
+    width: 240px;
+    height: 240px;
   }
 
-  .right {
-    h1 {
-      font-size: 32px;
-    }
-
-    p {
-      font-size: 18px;
-    }
+  .right h1 {
+    font-size: 32px;
   }
 
-  .social-links {
-    button {
-      font-size: 18px;
-      padding: 4px 10px;
-    }
+  .profile-role {
+    font-size: 18px;
+  }
 
-    a {
-      font-size: 22px;
-    }
-
-    a:last-child {
-      font-size: 24px;
-    }
+  .profile-bio {
+    font-size: 16px;
   }
 }
 
-// for mobile devices
 @media only screen and (max-width: 430px) {
-  .profile-content {
-    display: block;
-    margin-top: 10px;
+  .right h1 {
+    font-size: 26px;
   }
 
-  .right {
-    h1 {
-      font-size: 24px;
-    }
-
-    p {
-      font-size: 16px;
-    }
+  .profile-bio,
+  .profile-highlights {
+    font-size: 15px;
   }
 }

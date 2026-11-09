@@ -62,19 +62,20 @@ export const TECH_SUPABASE = { icon: SiSupabase, name: 'supabase' };
 
 export const UserData = {
   name: 'Sajjad Ghaderi',
-  title: 'Full‑Stack Developer Specializing in Next.js, Node.js & TypeScript',
-  bio: `Full‑stack developer focused on building scalable systems and intuitive interfaces using Next.js, Node.js and TypeScript. I turn complex flows into clean, high‑performance products — from multilingual platforms to optimized booking systems.`,
+  title: 'Full‑Stack Developer',
+  stack: 'Next.js · Node.js · TypeScript',
+  availability: 'Stockholm · Open to fullstack roles',
+  bio: `I turn complex product flows into clean, high‑performance apps. Recent work includes multilingual insight platforms (Sense & Signal), a booking journey cut from 6 steps to 2, and production UI at Skolverket.`,
+  highlights: [
+    'CTO-level ownership of architecture, stack and delivery at Yemaya Labs',
+    'Reduced a live booking flow from 6 steps to 2',
+    'Shipped accessible React features on a national education platform',
+  ],
 };
 
 export const AboutMeData = {
-  title: 'Full‑stack developer & CTO, based in Stockholm, Sweden 📍',
-  description1: `I build products end to end — from cloud‑ready APIs and clean architecture to interfaces that feel simple under the hood. My stack is Next.js, Node.js and TypeScript, but the real work is turning messy, real‑world flows into systems that are fast, secure and easy to use.`,
-  subTitle: `How I work`,
-  description2: `At Yemaya Labs I lead technical direction as CTO, owning architecture, stack decisions and delivery of Sense — multilingual platforms for data collection and early narrative‑shift detection. That means GDPR‑aware workflows, CI/CD, and translating business needs into something that actually ships.
-
-Before that, at Fixmeapp I cut a booking journey from 6 steps to 2 with a real‑time adaptive UI, and built the FastAPI backend that had to keep up. At Skolverket I shipped accessible React/TypeScript features on a national education platform used by thousands of students — government constraints, WCAG, and production quality included.
-
-The through‑line is the same: reduce friction, keep the architecture honest, and ship work that holds up in production.`,
-  subTitle2: `Beyond the code`,
-  lastDescription: `Boxing and strength training keep me disciplined. Hiking and reading give me space to think — which is often where the better technical decisions come from. I’m motivated by craftsmanship, clear communication, and products that people actually enjoy using.`,
+  title: 'About',
+  description1: `I’m a fullstack developer based in Stockholm. I work across Next.js, Node.js and TypeScript — from APIs and cloud-ready architecture to interfaces that feel simple to use.`,
+  description2: `At Yemaya Labs I owned technical direction as CTO and shipped Sense & Signal, including GDPR-aware workflows and CI/CD. At Fixmeapp I rebuilt a booking journey from 6 steps to 2. At Skolverket I delivered production React/TypeScript on a platform used by thousands of students.`,
+  lastDescription: `I care about clear communication, honest architecture, and products that hold up in production. Boxing and hiking keep me sharp outside of work.`,
 };

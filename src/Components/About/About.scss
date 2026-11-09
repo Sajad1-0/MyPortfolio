@@ -2,160 +2,37 @@
 @use '../../Styles/variables.scss' as *;
 
 .about-section {
-  @include Profile; // the same placement as the profile section
-  width: 80%;
-  margin: auto;
-  will-change: transform;
-}
+  width: min(800px, 88%);
+  margin: 80px auto;
+  color: $text-color;
 
-.left-about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 80px;
-  padding: 80px 40px;
-  margin: auto;
-  border-right: 1px solid $border-color;
-
-  h1 {
-    font-family: 'Inter', sans-serif;
-    font-size: 40px;
-    color: $text-color;
-    will-change: transform, opacity;
-    animation: none; // ✅ Default: no animation
-  }
-
-  // ✅ Only animate when 'animate' class is added
-  &.animate h1 {
-    animation: letters 6s ease-in-out infinite alternate;
-
-    &:nth-child(2) {
-      animation-delay: 1s;
-    }
-    &:nth-child(3) {
-      animation-delay: 2s;
-    }
-    &:nth-child(4) {
-      animation-delay: 3s;
-    }
-    &:nth-child(5) {
-      animation-delay: 4s;
-    }
-  }
-
-  @keyframes letters {
-    0% {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-    50% {
-      color: $hover-text-color;
-      transform: translate3d(-10px, 0, 0);
-      opacity: 0.7;
-    }
-    100% {
-      transform: translate3d(0, 0, 0);
-      opacity: 0;
-    }
-  }
-}
-
-// right section
-.right-about {
   h1 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     text-align: center;
-    line-height: 1.8;
-  }
-
-  h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 30px;
-    font-weight: 500;
+    margin: 0 0 28px;
   }
 
   p {
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 2;
-    white-space: pre-line;
+    line-height: 1.7;
+    margin: 0 0 16px;
   }
 }
 
-// Responsive design for About section
-
-@media only screen and (max-width: 1280px) {
-  .about-section {
-    flex-wrap: wrap;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .left-about {
-    flex-direction: row;
-    border-bottom: 1px solid $border-color;
-    border-right: none;
-    padding: 10px 50px;
-    gap: 20px;
-
-    h1 {
-      letter-spacing: 35px;
-      animation: none;
-    }
-  }
-}
-
-// responsive for smaller devices
 @media only screen and (max-width: 768px) {
   .about-section {
-    width: 100%;
-  }
-
-  .left-about {
     h1 {
-      font-size: 30px;
-      letter-spacing: 10px;
-    }
-  }
-
-  // right section
-  .right-about {
-    h1 {
-      font-size: 20px;
-    }
-
-    h2 {
-      font-size: 18px;
-      text-align: center;
+      font-size: 28px;
     }
 
     p {
-      font-size: 15px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-}
-
-// responsive for mobile devices
-@media only screen and (max-width: 430px) {
-  .left-about {
-    display: flex;
-    justify-content: center;
-    padding: 10px 5rem;
-  }
-
-  .right-about {
-    h1 {
-      font-size: 15px;
-      padding: 10px 10px;
-    }
-
-    p {
-      font-size: 13px;
-      padding-left: 10px;
-      padding-right: 10px;
+      font-size: 16px;
     }
   }
 }

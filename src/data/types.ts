@@ -4,12 +4,15 @@ export interface TechConfig {
 }
 
 export type ProjectCategory = 'frontend' | 'backend' | 'fullstack';
+export type ProjectFilter = 'featured' | ProjectCategory;
 
 export interface Projects {
     id: number;
     title: string;
+    summary: string;
     description: string;
     category: ProjectCategory;
+    featured?: boolean;
     liveDemo?: string;
     githubLink: string;
     image: string;

@@ -29,6 +29,7 @@ export const Project: Projects[] = [
     id: 1,
     title: 'Jersey Sweden',
     category: 'frontend',
+    summary: 'Football jersey storefront with catalog filtering, cart and a responsive shopping flow.',
     description: `A responsive React application for a football jersey marketplace, built with JavaScript and TailwindCSS. Features product filtering, shopping cart management, and intuitive user flows for seamless online shopping.
 
 Key Features:
@@ -45,6 +46,7 @@ Key Features:
     id: 2,
     title: 'Movie App',
     category: 'frontend',
+    summary: 'React Native app for searching and browsing movies with typed screens and a mobile-first UI.',
     description: `A React Native mobile app for discovering and browsing movies. Built with TypeScript for type-safe screens, smooth navigation, and a polished mobile-first experience around search, details, and saved titles.
 
 Key Features:
@@ -60,6 +62,7 @@ Key Features:
     id: 3,
     title: 'Jersey Sweden Backend',
     category: 'backend',
+    summary: 'Spring Boot API for catalog, orders and inventory behind the jersey storefront.',
     description: `A robust Java Spring Boot backend for football jersey e-commerce, handling product management, order processing, and inventory tracking with RESTful API design.
 
 Core Functionality:
@@ -75,6 +78,7 @@ Core Functionality:
     id: 4,
     title: 'Spotly',
     category: 'backend',
+    summary: 'Booking API with JWT auth, conflict checks and Docker — Node.js, TypeScript and PostgreSQL.',
     description: `A production-ready REST API for workspace and conference room bookings. Built with Node.js and TypeScript using Clean Architecture, JWT authentication, availability checks, and Dockerized deployment for a stable production setup.
 
 Core Functionality:
@@ -97,6 +101,7 @@ Core Functionality:
     id: 5,
     title: 'Subscription Tracker',
     category: 'backend',
+    summary: 'REST API for recurring subscriptions, renewals and reminders on MongoDB.',
     description: `A Node.js backend for tracking recurring subscriptions, costs, and reminders. Designed as a clean REST API with validation and MongoDB persistence — ready to power dashboards, notifications, and automation.
 
 Core Functionality:
@@ -112,6 +117,8 @@ Core Functionality:
     id: 6,
     title: 'Job Application Tracker',
     category: 'fullstack',
+    featured: true,
+    summary: 'Next.js app to track applications, statuses and deadlines — live in production.',
     description: `A fullstack Next.js app for tracking job applications end to end — companies, statuses, and deadlines in one place. Combines a modern React UI with server-side data handling and a maintainable TypeScript codebase.
 
 Key Features:
@@ -128,6 +135,8 @@ Key Features:
     id: 7,
     title: 'Dev Events',
     category: 'fullstack',
+    featured: true,
+    summary: 'Event platform on Next.js 16 with filtering, auth and App Router / Server Actions.',
     description: `A fullstack developer events platform built with Next.js 16 — the hub for events you should not miss. Combines event discovery and registration with App Router patterns, server-side rendering, and a typed MongoDB data layer.
 
 Key Features:

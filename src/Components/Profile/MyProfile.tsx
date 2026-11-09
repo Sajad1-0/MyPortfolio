@@ -19,14 +19,21 @@ export const MyProfile: React.FC = () => {
         <img src={profilePhoto} alt="Sajjad Ghaderi" />
       </div>
       <div className="right">
-        <h1>{UserData.title}</h1>
-        <p>{UserData.bio}</p>
+        <p className="profile-eyebrow">{UserData.availability}</p>
+        <h1>{UserData.name}</h1>
+        <p className="profile-role">{UserData.title}</p>
+        <p className="profile-stack">{UserData.stack}</p>
+        <p className="profile-bio">{UserData.bio}</p>
+        <ul className="profile-highlights">
+          {UserData.highlights.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
         <CvDownload />
         <div className="social-links">
           <button type="button" onClick={handleContact}>
-            Contact Me!
+            Contact Me
           </button>
-
           <a
             href="https://www.linkedin.com/in/sajjad-ghaderi-7230821aa/"
             target="_blank"

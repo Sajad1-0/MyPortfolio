@@ -10,9 +10,9 @@ interface Navigation {
 }
 
 const MenuLinks: Navigation[] = [
-    {name: 'Home', href: '/'},
-    {name: 'About', href: '#about'},
+    {name: 'Experience', href: '#workexperience'},
     {name: 'Projects', href: '#projects'},
+    {name: 'About', href: '#about'},
     {name: 'Contact', href: '#contact'}
 ]
 

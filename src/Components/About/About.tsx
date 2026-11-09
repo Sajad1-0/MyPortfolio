@@ -1,30 +1,16 @@
-import React from 'react'
-import './About.scss'
-import { AboutMeData } from '../../data/constants'
-import { useInView } from '../../Hooks/useInView'
+import React from 'react';
+import './About.scss';
+import { AboutMeData } from '../../data/constants';
 
 const About = () => {
-  const { ref, isInView } = useInView();
-
   return (
-    <div id='about' className='about-section'>
-      <div ref={ref} className={`left-about ${isInView ? 'animate' : ''}`}>
-        <h1>A</h1>
-        <h1>B</h1>
-        <h1>O</h1>
-        <h1>U</h1>
-        <h1>T</h1>
-      </div>
-      <div className='right-about'>
-        <h1>{AboutMeData.title}</h1>
-        <p>{AboutMeData.description1}</p>
-        <h2>{AboutMeData.subTitle}</h2>
-        <p>{AboutMeData.description2}</p>
-        <h2>{AboutMeData.subTitle2}</h2>
-        <p>{AboutMeData.lastDescription}</p>
-      </div>
+    <div id="about" className="about-section">
+      <h1>{AboutMeData.title}</h1>
+      <p>{AboutMeData.description1}</p>
+      <p>{AboutMeData.description2}</p>
+      <p>{AboutMeData.lastDescription}</p>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
