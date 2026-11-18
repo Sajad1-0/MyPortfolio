@@ -5,6 +5,7 @@ import movieApp from '../Assests/Movie-app.png';
 import subscriptionTracker from '../Assests/subscription-app.png';
 import jobApplicationTracker from '../Assests/job-app-tracker.png';
 import devEvents from '../Assests/event-app.png';
+import shiftkit from '../Assests/shiftkit.jpg';
 import {
   TECH_REACT,
   TECH_JAVASCRIPT,
@@ -22,9 +23,39 @@ import {
   TECH_NEXTJS,
   TECH_REACTNATIVE,
   TECH_MONGODB,
+  TECH_STRIPE,
 } from './constants';
 
 export const Project: Projects[] = [
+  {
+    id: 8,
+    title: 'Shiftkit',
+    category: 'fullstack',
+    featured: true,
+    summary:
+      'Swedish shift-pay SaaS: log hours, estimate tax and unlock Premium with Stripe — live on Vercel + Railway.',
+    description: `A production fullstack product for Swedish shift workers. Log shifts, see pay before and after tax, and upgrade to Premium. Next.js 16 + React 19 frontend on Vercel, Express API with JWT, Zod and Drizzle on Railway.
+
+Key Features:
+- Shift logging with OB rules, monthly summaries and tax estimates
+- JWT auth, Zod-validated API and PostgreSQL via Drizzle ORM
+- Stripe Checkout and webhooks for Premium subscriptions
+- shadcn/ui + Tailwind interface deployed as a live product`,
+    image: shiftkit,
+    liveDemo: 'https://shiftkit-phi.vercel.app/',
+    githubLink: 'https://github.com/Sajad1-0/Skiftl-n-frontend',
+    githubBackendLink: 'https://github.com/Sajad1-0/Skiftl-n-backend',
+    technologies: [
+      TECH_NEXTJS,
+      TECH_TYPESCRIPT,
+      TECH_TAILWIND,
+      TECH_NODEJS,
+      TECH_EXPRESS,
+      TECH_POSTGRESQL,
+      TECH_DRIZZLE,
+      TECH_STRIPE,
+    ],
+  },
   {
     id: 1,
     title: 'Jersey Sweden',

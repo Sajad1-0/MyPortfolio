@@ -78,10 +78,27 @@ const MyProjects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="github"
-                  aria-label={`${project.title} on GitHub`}
+                  aria-label={
+                    project.githubBackendLink
+                      ? `${project.title} frontend on GitHub`
+                      : `${project.title} on GitHub`
+                  }
                 >
                   <FaGithubSquare />
+                  {project.githubBackendLink && <span>Frontend</span>}
                 </a>
+                {project.githubBackendLink && (
+                  <a
+                    href={project.githubBackendLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github"
+                    aria-label={`${project.title} backend on GitHub`}
+                  >
+                    <FaGithubSquare />
+                    <span>Backend</span>
+                  </a>
+                )}
               </div>
             </div>
           </div>

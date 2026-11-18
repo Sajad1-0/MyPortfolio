@@ -15,6 +15,7 @@ export interface Projects {
     featured?: boolean;
     liveDemo?: string;
     githubLink: string;
+    githubBackendLink?: string;
     image: string;
     technologies: TechConfig[];
 }

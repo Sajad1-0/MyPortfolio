@@ -28,6 +28,7 @@ import { SiPostman } from 'react-icons/si';
 import { SiMongodb } from 'react-icons/si';
 import { SiPrisma } from 'react-icons/si';
 import { SiSupabase } from 'react-icons/si';
+import { SiStripe } from 'react-icons/si';
 
 export const TECH_HTML = { icon: FaHtml5, name: 'html' };
 export const TECH_CSS = { icon: FaCss3Alt, name: 'css' };
@@ -59,6 +60,7 @@ export const TECH_POSTMAN = { icon: SiPostman, name: 'postman' };
 export const TECH_MONGODB = { icon: SiMongodb, name: 'mongodb' };
 export const TECH_PRISMA = { icon: SiPrisma, name: 'prisma' };
 export const TECH_SUPABASE = { icon: SiSupabase, name: 'supabase' };
+export const TECH_STRIPE = { icon: SiStripe, name: 'stripe' };
 
 export const UserData = {
   name: 'Sajjad Ghaderi',
